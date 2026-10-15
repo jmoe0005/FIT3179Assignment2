@@ -1,0 +1,209 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Line chart: national overnight trips per year",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "data/national_year.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.trips_000 / 1000",
+      "as": "trips_m"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "color": "#2a8578",
+        "strokeWidth": 3,
+        "point": {
+          "size": 60,
+          "filled": true,
+          "color": "#2a8578"
+        }
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative",
+          "title": "Year ending December",
+          "scale": {
+            "domain": [
+              2019,
+              2025
+            ]
+          },
+          "axis": {
+            "format": "d",
+            "tickCount": 7,
+            "grid": false
+          }
+        },
+        "y": {
+          "field": "trips_m",
+          "type": "quantitative",
+          "title": "Overnight trips (millions)",
+          "scale": {
+            "domain": [
+              70,
+              125
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "trips_m",
+            "title": "Overnight trips (millions)",
+            "format": ".1f"
+          },
+          {
+            "field": "source",
+            "title": "Survey"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "year": 2019,
+            "trips_m": 117.4,
+            "label": "2019: 117 million trips"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "color": "#333",
+        "dx": 8,
+        "dy": -12,
+        "align": "left"
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "trips_m",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "year": 2021,
+            "trips_m": 82.1,
+            "label": "2021: 82 million, down 30%"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "color": "#333",
+        "dx": 8,
+        "dy": 4,
+        "align": "left"
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "trips_m",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "year": 2020,
+            "trips_m": 99.5,
+            "label": "(no 2020 data)"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "color": "#555",
+        "fontStyle": "italic",
+        "dx": 8,
+        "dy": 0,
+        "align": "left"
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "trips_m",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "year": 2025,
+            "trips_m": 113.0,
+            "label": "New survey method from 2025"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "color": "#333",
+        "fontStyle": "italic",
+        "dx": 0,
+        "dy": 18,
+        "align": "right"
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "trips_m",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Source Sans 3"
+  }
+}

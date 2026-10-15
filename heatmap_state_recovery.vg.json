@@ -1,0 +1,152 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Heatmap: overnight trips by destination state and year, as % change from 2019",
+  "width": "container",
+  "height": 280,
+  "autosize": {
+    "type": "fit-x",
+    "contains": "padding"
+  },
+  "data": {
+    "url": "data/trips_state_year.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.year == 2019 ? datum.trips_000 : null",
+      "as": "base_candidate"
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "base_candidate",
+          "as": "base2019"
+        }
+      ],
+      "groupby": [
+        "state"
+      ]
+    },
+    {
+      "calculate": "(datum.trips_000 - datum.base2019) / datum.base2019",
+      "as": "change"
+    },
+    {
+      "calculate": "datum.state == 'Australian Capital Territory' ? 'ACT' : datum.state",
+      "as": "State"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": "Year ending December",
+      "axis": {
+        "labelAngle": 0,
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "y": {
+      "field": "State",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "change",
+        "op": "mean",
+        "order": "descending"
+      },
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelLimit": 260,
+        "minExtent": 140,
+        "labelPadding": 8
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "#ffffff",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "change",
+          "type": "quantitative",
+          "title": "vs 2019",
+          "scale": {
+            "scheme": "redblue",
+            "domain": [
+              -0.5,
+              0.5
+            ]
+          },
+          "legend": {
+            "format": "+.0%",
+            "orient": "right",
+            "gradientLength": 160
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "title": "Destination"
+          },
+          {
+            "field": "year",
+            "title": "Year"
+          },
+          {
+            "field": "trips_000",
+            "title": "Overnight trips ('000)",
+            "format": ",.0f"
+          },
+          {
+            "field": "change",
+            "title": "Change vs 2019",
+            "format": "+.0%"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year != 2019"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 11
+      },
+      "encoding": {
+        "text": {
+          "field": "change",
+          "type": "quantitative",
+          "format": "+.0%"
+        },
+        "color": {
+          "condition": {
+            "test": "abs(datum.change) > 0.3",
+            "value": "#ffffff"
+          },
+          "value": "#222222"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Source Sans 3",
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleColor": "#555"
+    }
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Choropleth: overnight trips received per resident, by destination state, 2024",
+  "width": "container",
+  "height": 380,
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -134,
+      0
+    ]
+  },
+  "data": {
+    "url": "data/trips_state_year.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.year == 2024"
+    },
+    {
+      "lookup": "state",
+      "from": {
+        "data": {
+          "url": "data/state_population.csv"
+        },
+        "key": "state",
+        "fields": [
+          "abbr",
+          "population_000",
+          "lat",
+          "lon"
+        ]
+      }
+    },
+    {
+      "lookup": "state",
+      "from": {
+        "data": {
+          "url": "js/aus_states.topojson",
+          "format": {
+            "type": "topojson",
+            "feature": "states"
+          }
+        },
+        "key": "properties.name"
+      },
+      "as": "geo"
+    },
+    {
+      "calculate": "datum.trips_000 / datum.population_000",
+      "as": "trips_per_resident"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "shape": {
+          "field": "geo",
+          "type": "geojson"
+        },
+        "color": {
+          "field": "trips_per_resident",
+          "type": "quantitative",
+          "title": "Overnight trips per resident",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              3.5,
+              4,
+              4.5,
+              5
+            ],
+            "range": [
+              "#e3f1ef",
+              "#a9d6cf",
+              "#5fb3a8",
+              "#2a8578",
+              "#0f5a50"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "format": ".1f"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "title": "Destination"
+          },
+          {
+            "field": "year",
+            "title": "Year ending December"
+          },
+          {
+            "field": "trips_000",
+            "title": "Overnight trips ('000)",
+            "format": ",.0f"
+          },
+          {
+            "field": "population_000",
+            "title": "Residents ('000)",
+            "format": ",.0f"
+          },
+          {
+            "field": "trips_per_resident",
+            "title": "Trips per resident",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "abbr"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.trips_per_resident >= 4.5",
+            "value": "#ffffff"
+          },
+          "value": "#1d2b2a"
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.abbr != 'ACT'"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Source Sans 3",
+    "legend": {
+      "titleFontSize": 12,
+      "labelFontSize": 11
+    }
+  }
+}

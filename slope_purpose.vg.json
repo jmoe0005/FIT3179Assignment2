@@ -1,0 +1,143 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Slope chart: overnight trips by purpose, 2019 vs 2024",
+  "width": "container",
+  "height": 320,
+  "data": {
+    "url": "data/trips_purpose_year.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.year == 2019 || datum.year == 2024"
+    },
+    {
+      "calculate": "datum.trips_000 / 1000",
+      "as": "trips_m"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null,
+      "scale": {
+        "padding": 0.8
+      },
+      "axis": {
+        "labelAngle": 0,
+        "labelFontSize": 13,
+        "labelFontWeight": "bold",
+        "orient": "top",
+        "domain": false,
+        "ticks": false
+      }
+    },
+    "y": {
+      "field": "trips_m",
+      "type": "quantitative",
+      "axis": null
+    },
+    "color": {
+      "field": "purpose",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "domain": [
+          "Holiday",
+          "Visiting friends and relatives",
+          "Business",
+          "Other"
+        ],
+        "range": [
+          "#2a8578",
+          "#7b6bb0",
+          "#d9772b",
+          "#9a9a9a"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "purpose",
+        "title": "Purpose"
+      },
+      {
+        "field": "year",
+        "title": "Year"
+      },
+      {
+        "field": "trips_m",
+        "title": "Overnight trips (millions)",
+        "format": ".1f"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 3
+      },
+      "encoding": {
+        "detail": {
+          "field": "purpose"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 80,
+        "opacity": 1
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2019"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -10,
+        "fontSize": 12
+      },
+      "encoding": {
+        "text": {
+          "field": "trips_m",
+          "format": ".1f"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.year == 2024"
+        },
+        {
+          "calculate": "format(datum.trips_m, '.1f') + 'm  ' + (datum.purpose == 'Visiting friends and relatives' ? 'Visiting friends & family' : datum.purpose)",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "label"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Source Sans 3"
+  }
+}

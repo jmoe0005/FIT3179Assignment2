@@ -1,0 +1,172 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Proportional symbol map: overnight visitor spend by destination state, with a year dropdown",
+  "width": "container",
+  "height": 380,
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -134,
+      0
+    ]
+  },
+  "params": [
+    {
+      "name": "year_select",
+      "value": 2024,
+      "bind": {
+        "input": "select",
+        "options": [
+          2019,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "name": "Year: "
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "js/aus_states.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#eceae4",
+        "stroke": "#ffffff",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
+        "url": "data/trips_state_year.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.year == year_select"
+        },
+        {
+          "lookup": "state",
+          "from": {
+            "data": {
+              "url": "data/state_population.csv"
+            },
+            "key": "state",
+            "fields": [
+              "abbr",
+              "lat",
+              "lon"
+            ]
+          }
+        },
+        {
+          "calculate": "datum.spend_m / 1000",
+          "as": "spend_bn"
+        }
+      ],
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "circle",
+            "color": "#d9772b",
+            "opacity": 0.75,
+            "stroke": "#ffffff",
+            "strokeWidth": 1
+          },
+          "encoding": {
+            "size": {
+              "field": "spend_bn",
+              "type": "quantitative",
+              "title": "Overnight spend ($ billion)",
+              "scale": {
+                "domain": [
+                  0,
+                  35
+                ],
+                "range": [
+                  0,
+                  3500
+                ]
+              },
+              "legend": {
+                "orient": "bottom",
+                "values": [
+                  5,
+                  15,
+                  30
+                ],
+                "symbolFillColor": "#d9772b",
+                "symbolStrokeColor": "#ffffff",
+                "direction": "horizontal"
+              }
+            },
+            "tooltip": [
+              {
+                "field": "state",
+                "title": "Destination"
+              },
+              {
+                "field": "year",
+                "title": "Year ending December"
+              },
+              {
+                "field": "spend_bn",
+                "title": "Overnight spend ($bn)",
+                "format": ".1f"
+              },
+              {
+                "field": "trips_000",
+                "title": "Overnight trips ('000)",
+                "format": ",.0f"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "dy": -2,
+            "fontSize": 11,
+            "fontWeight": 700,
+            "color": "#3a2a1c"
+          },
+          "encoding": {
+            "text": {
+              "field": "abbr"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "font": "Source Sans 3",
+    "legend": {
+      "titleFontSize": 12,
+      "labelFontSize": 11
+    }
+  }
+}
