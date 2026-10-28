@@ -1,0 +1,35 @@
+flow,origin,origin_abbr,destination,destination_abbr,trips_000,lon,lat,angle
+0,Victoria,VIC,New South Wales,NSW,4111,147.0587,-32.7981,-1.8
+1,Queensland,QLD,New South Wales,NSW,4628,146.121,-31.3579,140.0
+2,South Australia,SA,New South Wales,NSW,497,145.732,-32.5324,75.8
+3,Western Australia,WA,New South Wales,NSW,395,144.0094,-32.8165,79.6
+4,Tasmania,TAS,New South Wales,NSW,183,147.6485,-33.1734,-25.2
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,147.4289,-32.4343,-53.8
+6,New South Wales,NSW,Victoria,VIC,3731,144.2413,-36.3019,178.2
+7,Queensland,QLD,Victoria,VIC,1620,143.3651,-35.45,153.6
+8,South Australia,SA,Victoria,VIC,1188,142.9737,-36.6185,107.1
+9,Western Australia,WA,Victoria,VIC,621,141.2523,-36.8833,93.2
+10,Tasmania,TAS,Victoria,VIC,444,144.8911,-37.2825,-47.3
+11,Australian Capital Territory,ACT,Victoria,VIC,336,144.6701,-36.5415,-137.4
+12,New South Wales,NSW,Queensland,QLD,4588,145.379,-23.3421,-40.0
+13,Victoria,VIC,Queensland,QLD,2389,145.4349,-23.95,-26.4
+14,South Australia,SA,Queensland,QLD,375,144.1117,-23.6994,19.0
+15,Western Australia,WA,Queensland,QLD,318,142.3892,-24.0103,54.8
+16,Tasmania,TAS,Queensland,QLD,163,146.0193,-24.3226,-32.4
+17,Northern Territory,NT,Queensland,QLD,124,143.2049,-22.7969,79.0
+18,Australian Capital Territory,ACT,Queensland,QLD,175,145.8061,-23.5733,-44.0
+19,New South Wales,NSW,South Australia,SA,798,137.068,-29.6676,-104.2
+20,Victoria,VIC,South Australia,SA,1528,137.1263,-30.2815,-72.9
+21,Queensland,QLD,South Australia,SA,382,136.1883,-28.8006,-161.0
+22,Western Australia,WA,South Australia,SA,210,134.0771,-30.2789,82.5
+23,Northern Territory,NT,South Australia,SA,94,134.894,-29.0755,141.2
+24,New South Wales,NSW,Western Australia,WA,519,124.4906,-24.8835,-100.4
+25,Victoria,VIC,Western Australia,WA,531,124.5477,-25.5167,-86.8
+26,Queensland,QLD,Western Australia,WA,323,123.6108,-23.9897,-125.2
+27,New South Wales,NSW,Tasmania,TAS,416,145.9515,-40.7766,154.8
+28,Victoria,VIC,Tasmania,TAS,669,146.0089,-41.3675,132.7
+29,Queensland,QLD,Tasmania,TAS,229,145.0807,-39.9274,147.6
+30,Queensland,QLD,Northern Territory,NT,284,134.6951,-19.2031,-101.0
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,148.5711,-35.2657,126.2
+32,Victoria,VIC,Australian Capital Territory,ACT,612,148.6299,-35.8585,42.6
+33,Queensland,QLD,Australian Capital Territory,ACT,374,147.6939,-34.4267,136.0

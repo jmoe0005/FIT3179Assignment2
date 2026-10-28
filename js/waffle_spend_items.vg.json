@@ -1,0 +1,71 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Waffle charts (small multiples): how every $100 spent on an overnight trip is split, by the main reason for the trip, 2024. One square = $1.",
+  "data": {
+    "url": "data/spend_waffle_cells.csv",
+    "format": {"type": "csv", "parse": {"col": "number", "row": "number", "share_pct": "number"}}
+  },
+  "transform": [
+    {
+      "calculate": "datum.purpose == 'Visiting friends and relatives' ? 'Visiting friends & relatives' : datum.purpose",
+      "as": "panel"
+    }
+  ],
+  "facet": {
+    "column": {
+      "field": "panel",
+      "type": "nominal",
+      "title": null,
+      "sort": ["Holiday", "Visiting friends & relatives", "Business"],
+      "header": {
+        "labelFontSize": 14,
+        "labelFontWeight": "bold",
+        "labelColor": "#33414e",
+        "labelPadding": 6
+      }
+    }
+  },
+  "spacing": 26,
+  "spec": {
+    "width": 190,
+    "height": 190,
+    "mark": {"type": "rect", "stroke": "#ffffff", "strokeWidth": 2},
+    "encoding": {
+      "x": {"field": "col", "type": "ordinal", "axis": null},
+      "y": {"field": "row", "type": "ordinal", "axis": null},
+      "color": {
+        "field": "item_group",
+        "type": "nominal",
+        "title": null,
+        "scale": {
+          "domain": [
+            "Accommodation",
+            "Getting there and around",
+            "Food and drink",
+            "Shopping, activities and other"
+          ],
+          "range": ["#c8741f", "#8a96a3", "#e3b75a", "#e6e1d6"]
+        },
+        "legend": {
+          "orient": "top",
+          "direction": "horizontal",
+          "symbolType": "square",
+          "symbolSize": 160,
+          "labelFontSize": 13,
+          "columnPadding": 18
+        }
+      },
+      "tooltip": [
+        {"field": "purpose", "title": "Main reason for trip"},
+        {"field": "item_group", "title": "Spent on"},
+        {"field": "share_pct", "title": "Dollars out of every $100", "format": ".0f"}
+      ]
+    }
+  },
+  "config": {
+    "font": "Source Sans 3",
+    "view": {"stroke": null},
+    "axis": {"labelFontSize": 13, "titleFontSize": 13},
+    "legend": {"labelFontSize": 13, "titleFontSize": 13}
+  }
+}

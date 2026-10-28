@@ -1,0 +1,148 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Diverging bar chart: share of overnight trips to each state made by its own residents (left) and by visitors from other states (right), 2024",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "data/locals_vs_interstate_2024.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "locals_000": "number",
+        "interstate_000": "number",
+        "total_000": "number",
+        "interstate_share": "number"
+      }
+    }
+  },
+  "transform": [
+    {"calculate": "1 - datum.interstate_share", "as": "local_share"},
+    {"calculate": "-(1 - datum.interstate_share)", "as": "local_left"},
+    {"calculate": "datum.total_000 / 1000", "as": "total_m"},
+    {"calculate": "0", "as": "zero"}
+  ],
+  "layer": [
+    {
+      "mark": {"type": "bar", "color": "#d9d3c7", "height": 22},
+      "encoding": {
+        "x": {
+          "field": "local_left",
+          "type": "quantitative",
+          "title": null,
+          "scale": {"domain": [-1, 1]},
+          "axis": {
+            "values": [-1, -0.5, 0, 0.5, 1],
+            "labelExpr": "format(abs(datum.value), '.0%')",
+            "grid": true
+          }
+        },
+        "x2": {"field": "zero"},
+        "tooltip": [
+          {"field": "state", "title": "Destination"},
+          {
+            "field": "local_share",
+            "title": "Trips by people from the same state",
+            "format": ".0%"
+          },
+          {
+            "field": "interstate_share",
+            "title": "Trips by visitors from other states",
+            "format": ".0%"
+          },
+          {"field": "total_m", "title": "All overnight trips (millions)", "format": ".1f"}
+        ],
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "title": null,
+          "sort": {"field": "interstate_share", "op": "max", "order": "descending"},
+          "axis": {"domain": false, "ticks": false, "labelPadding": 8, "labelFontSize": 12}
+        }
+      }
+    },
+    {
+      "mark": {"type": "bar", "color": "#1f7a6d", "height": 22},
+      "encoding": {
+        "x": {"field": "zero", "type": "quantitative"},
+        "x2": {"field": "interstate_share"},
+        "tooltip": [
+          {"field": "state", "title": "Destination"},
+          {
+            "field": "local_share",
+            "title": "Trips by people from the same state",
+            "format": ".0%"
+          },
+          {
+            "field": "interstate_share",
+            "title": "Trips by visitors from other states",
+            "format": ".0%"
+          },
+          {"field": "total_m", "title": "All overnight trips (millions)", "format": ".1f"}
+        ],
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "title": null,
+          "sort": {"field": "interstate_share", "op": "max", "order": "descending"},
+          "axis": {"domain": false, "ticks": false, "labelPadding": 8, "labelFontSize": 12}
+        }
+      }
+    },
+    {
+      "transform": [{"filter": "datum.local_share > 0.05"}],
+      "mark": {"type": "text", "align": "left", "dx": 6, "fontSize": 13, "color": "#33414e"},
+      "encoding": {
+        "x": {"field": "local_left", "type": "quantitative"},
+        "text": {"field": "local_share", "type": "quantitative", "format": ".0%"},
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "title": null,
+          "sort": {"field": "interstate_share", "op": "max", "order": "descending"},
+          "axis": {"domain": false, "ticks": false, "labelPadding": 8, "labelFontSize": 12}
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -6,
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#ffffff"
+      },
+      "encoding": {
+        "x": {"field": "interstate_share", "type": "quantitative"},
+        "text": {"field": "interstate_share", "type": "quantitative", "format": ".0%"},
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "title": null,
+          "sort": {"field": "interstate_share", "op": "max", "order": "descending"},
+          "axis": {"domain": false, "ticks": false, "labelPadding": 8, "labelFontSize": 12}
+        }
+      }
+    },
+    {
+      "data": {"values": [{"x": 0}]},
+      "mark": {"type": "rule", "color": "#33414e", "strokeWidth": 1.5},
+      "encoding": {"x": {"field": "x", "type": "quantitative"}}
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3",
+    "view": {"stroke": null},
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "labelColor": "#55606a",
+      "titleColor": "#55606a",
+      "titleFontWeight": "normal",
+      "domainColor": "#b9b2a6",
+      "tickColor": "#b9b2a6",
+      "gridColor": "#ece8e0"
+    },
+    "legend": {"labelFontSize": 13, "titleFontSize": 13}
+  }
+}

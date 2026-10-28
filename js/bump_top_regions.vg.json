@@ -1,0 +1,151 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Bump chart: rank of Australia's ten most-visited tourism regions (by visitor nights in 2024) in each year since 2019",
+  "width": "container",
+  "height": 380,
+  "data": {
+    "url": "data/regions_year.csv",
+    "format": {"type": "csv", "parse": {"year": "number", "rank": "number", "nights_000": "number"}}
+  },
+  "transform": [
+    {
+      "filter": {
+        "field": "region",
+        "oneOf": [
+          "Sydney",
+          "Melbourne",
+          "Brisbane",
+          "North Coast NSW",
+          "Destination Perth",
+          "Gold Coast",
+          "South Coast",
+          "Sunshine Coast",
+          "Adelaide",
+          "Hunter"
+        ]
+      }
+    },
+    {"calculate": "datum.region == 'Destination Perth' ? 'Perth' : datum.region", "as": "name"},
+    {"calculate": "datum.nights_000 / 1000", "as": "nights_m"},
+    {
+      "calculate": "datum.region == 'North Coast NSW' || datum.region == 'Adelaide'",
+      "as": "featured"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": null,
+      "scale": {"domain": [2018.8, 2026.2]},
+      "axis": {
+        "format": "d",
+        "values": [2019, 2020, 2021, 2022, 2023, 2024],
+        "grid": false,
+        "domain": false,
+        "ticks": false,
+        "orient": "top",
+        "labelFontWeight": "bold",
+        "labelExpr": "datum.value == 2020 ? '(no 2020 data)' : datum.label"
+      }
+    },
+    "y": {
+      "field": "rank",
+      "type": "quantitative",
+      "title": "Rank by visitor nights",
+      "scale": {"domain": [13.8, -0.3], "nice": false},
+      "axis": {
+        "values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+        "grid": false,
+        "domain": false,
+        "ticks": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "line", "strokeWidth": 3, "interpolate": "monotone"},
+      "encoding": {
+        "color": {
+          "condition": [
+            {"param": "hover", "empty": false, "value": "#1f7a6d"},
+            {"test": "datum.featured", "value": "#1f7a6d"}
+          ],
+          "value": "#cfc9be"
+        },
+        "opacity": {"condition": {"test": "datum.featured", "value": 1}, "value": 0.9},
+        "detail": {"field": "region"}
+      }
+    },
+    {
+      "mark": {"type": "circle", "size": 110, "opacity": 1, "stroke": "#ffffff", "strokeWidth": 1.5},
+      "encoding": {
+        "color": {
+          "condition": [
+            {"param": "hover", "empty": false, "value": "#1f7a6d"},
+            {"test": "datum.featured", "value": "#1f7a6d"}
+          ],
+          "value": "#b9b2a6"
+        },
+        "tooltip": [
+          {"field": "name", "title": "Region"},
+          {"field": "year", "title": "Year"},
+          {"field": "rank", "title": "Rank"},
+          {"field": "nights_m", "title": "Visitor nights (millions)", "format": ".1f"}
+        ]
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {"type": "point", "fields": ["region"], "on": "mouseover", "clear": "mouseout"}
+        }
+      ]
+    },
+    {
+      "transform": [{"filter": "datum.year == 2024 && datum.featured"}],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#1f7a6d"
+      },
+      "encoding": {"text": {"field": "name"}}
+    },
+    {
+      "transform": [{"filter": "datum.year == 2024 && !datum.featured"}],
+      "mark": {"type": "text", "align": "left", "dx": 10, "fontSize": 13, "color": "#33414e"},
+      "encoding": {"text": {"field": "name"}}
+    },
+    {
+      "data": {"values": [{"year": 2021, "rank": 0.2, "label": "2021: North Coast NSW beat Sydney"}]},
+      "mark": {"type": "text", "fontSize": 13, "color": "#1f7a6d", "fontWeight": "bold"},
+      "encoding": {"text": {"field": "label"}}
+    },
+    {
+      "data": {"values": [{"year": 2022, "rank": 13, "label": "Adelaide climbs from 13th to 9th"}]},
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "color": "#1f7a6d",
+        "fontWeight": "bold",
+        "dy": 18,
+        "align": "center"
+      },
+      "encoding": {"text": {"field": "label"}}
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3",
+    "view": {"stroke": null},
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "labelColor": "#55606a",
+      "titleColor": "#55606a",
+      "titleFontWeight": "normal"
+    },
+    "legend": {"labelFontSize": 13, "titleFontSize": 13}
+  }
+}

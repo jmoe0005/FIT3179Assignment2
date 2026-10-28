@@ -1,0 +1,17 @@
+area,state,type,trips_2019_000,trips_2024_000,change
+Sydney,NSW,Capital or major city,12655,11338,-0.1041
+Regional NSW,NSW,Regional,27213,26847,-0.0135
+Melbourne,VIC,Capital or major city,11435,10411,-0.0896
+Regional VIC,VIC,Regional,19051,19498,0.0235
+Gold Coast,QLD,Capital or major city,4202,4287,0.0201
+Brisbane,QLD,Capital or major city,8177,8149,-0.0034
+Regional QLD,QLD,Regional,14603,14895,0.02
+Adelaide,SA,Capital or major city,3485,3531,0.0133
+Regional SA,SA,Regional,4994,4482,-0.1025
+Perth,WA,Capital or major city,4704,4449,-0.0542
+Regional WA,WA,Regional,6866,6845,-0.003
+Hobart and the South,TAS,Capital or major city,1747,1578,-0.0967
+Regional TAS,TAS,Regional,1897,1966,0.0364
+Darwin,NT,Capital or major city,772,689,-0.1074
+Regional NT,NT,Regional,1133,880,-0.2232
+Canberra,ACT,Capital or major city,3203,3098,-0.0329

@@ -1,0 +1,118 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Connected scatterplot: overnight trips (x) against overnight spend (y), joined year by year, 2019 to 2024",
+  "width": "container",
+  "height": 320,
+  "data": {"url": "data/national_year.csv"},
+  "transform": [
+    {"filter": "datum.year <= 2024"},
+    {"calculate": "datum.trips_000 / 1000", "as": "trips_m"},
+    {"calculate": "datum.spend_m / 1000", "as": "spend_bn"},
+    {"calculate": "datum.spend_m * 1000000 / (datum.trips_000 * 1000)", "as": "spend_per_trip"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "trips_m",
+      "type": "quantitative",
+      "title": "Overnight trips (millions)",
+      "scale": {"domain": [65, 125]},
+      "axis": {"titleColor": "#1f7a6d", "titleFontWeight": "bold"}
+    },
+    "y": {
+      "field": "spend_bn",
+      "type": "quantitative",
+      "title": "Spending on overnight trips ($ billion)",
+      "scale": {"domain": [40, 120]},
+      "axis": {"titleColor": "#c8741f", "titleFontWeight": "bold"}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "line", "color": "#9aa3ab", "strokeWidth": 2, "point": false},
+      "encoding": {"order": {"field": "year", "type": "ordinal"}}
+    },
+    {
+      "mark": {"type": "circle", "size": 110, "opacity": 1},
+      "encoding": {
+        "color": {
+          "condition": {"test": "datum.year == 2019 || datum.year == 2024", "value": "#33414e"},
+          "value": "#9aa3ab"
+        },
+        "tooltip": [
+          {"field": "year", "title": "Year"},
+          {"field": "trips_m", "title": "Overnight trips (millions)", "format": ".1f"},
+          {"field": "spend_bn", "title": "Spending ($ billion)", "format": ".1f"},
+          {"field": "spend_per_trip", "title": "Average spend per trip", "format": "$,.0f"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "color": "#33414e",
+        "dx": 14,
+        "align": "left"
+      },
+      "encoding": {"text": {"field": "year"}},
+      "transform": [{"filter": "datum.year != 2023"}]
+    },
+    {
+      "transform": [{"filter": "datum.year == 2023"}],
+      "mark": {
+        "type": "text",
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "color": "#33414e",
+        "dx": -14,
+        "align": "right"
+      },
+      "encoding": {"text": {"field": "year"}}
+    },
+    {
+      "data": {
+        "values": [
+          {"trips_m": 117.4, "spend_bn": 80.7, "label": "$687 per trip"},
+          {"trips_m": 115.0, "spend_bn": 110.3, "label": "$959 per trip"}
+        ]
+      },
+      "mark": {"type": "text", "fontSize": 13, "color": "#55606a", "dx": 14, "dy": 15, "align": "left"},
+      "encoding": {"text": {"field": "label"}}
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "trips_m": 67,
+            "spend_bn": 116,
+            "label": "Up and to the right = more trips and more money spent"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontStyle": "italic",
+        "color": "#7a8590",
+        "align": "left"
+      },
+      "encoding": {"text": {"field": "label"}}
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3",
+    "view": {"stroke": null},
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "labelColor": "#55606a",
+      "titleColor": "#55606a",
+      "titleFontWeight": "normal",
+      "domainColor": "#b9b2a6",
+      "tickColor": "#b9b2a6",
+      "gridColor": "#ece8e0"
+    },
+    "legend": {"labelFontSize": 13, "titleFontSize": 13}
+  }
+}

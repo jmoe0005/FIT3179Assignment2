@@ -1,0 +1,851 @@
+flow,origin,origin_abbr,destination,destination_abbr,trips_000,point,lon,lat
+0,Victoria,VIC,New South Wales,NSW,4111,0,144.3,-36.9
+0,Victoria,VIC,New South Wales,NSW,4111,1,144.5331,-36.7751
+0,Victoria,VIC,New South Wales,NSW,4111,2,144.7559,-36.6462
+0,Victoria,VIC,New South Wales,NSW,4111,3,144.9684,-36.5134
+0,Victoria,VIC,New South Wales,NSW,4111,4,145.1706,-36.3765
+0,Victoria,VIC,New South Wales,NSW,4111,5,145.3626,-36.2356
+0,Victoria,VIC,New South Wales,NSW,4111,6,145.5443,-36.0907
+0,Victoria,VIC,New South Wales,NSW,4111,7,145.7158,-35.9418
+0,Victoria,VIC,New South Wales,NSW,4111,8,145.8769,-35.7889
+0,Victoria,VIC,New South Wales,NSW,4111,9,146.0278,-35.632
+0,Victoria,VIC,New South Wales,NSW,4111,10,146.1685,-35.4711
+0,Victoria,VIC,New South Wales,NSW,4111,11,146.2988,-35.3062
+0,Victoria,VIC,New South Wales,NSW,4111,12,146.4189,-35.1373
+0,Victoria,VIC,New South Wales,NSW,4111,13,146.5287,-34.9643
+0,Victoria,VIC,New South Wales,NSW,4111,14,146.6282,-34.7874
+0,Victoria,VIC,New South Wales,NSW,4111,15,146.7175,-34.6065
+0,Victoria,VIC,New South Wales,NSW,4111,16,146.7965,-34.4216
+0,Victoria,VIC,New South Wales,NSW,4111,17,146.8652,-34.2327
+0,Victoria,VIC,New South Wales,NSW,4111,18,146.9237,-34.0397
+0,Victoria,VIC,New South Wales,NSW,4111,19,146.9719,-33.8428
+0,Victoria,VIC,New South Wales,NSW,4111,20,147.0098,-33.6419
+0,Victoria,VIC,New South Wales,NSW,4111,21,147.0374,-33.4369
+0,Victoria,VIC,New South Wales,NSW,4111,22,147.0548,-33.228
+0,Victoria,VIC,New South Wales,NSW,4111,23,147.0619,-33.015
+0,Victoria,VIC,New South Wales,NSW,4111,24,147.0587,-32.7981
+1,Queensland,QLD,New South Wales,NSW,4628,0,144.5,-22.5
+1,Queensland,QLD,New South Wales,NSW,4628,1,144.3415,-22.915
+1,Queensland,QLD,New South Wales,NSW,4628,2,144.2026,-23.3261
+1,Queensland,QLD,New South Wales,NSW,4628,3,144.0834,-23.7331
+1,Queensland,QLD,New South Wales,NSW,4628,4,143.9839,-24.1362
+1,Queensland,QLD,New South Wales,NSW,4628,5,143.904,-24.5353
+1,Queensland,QLD,New South Wales,NSW,4628,6,143.8437,-24.9303
+1,Queensland,QLD,New South Wales,NSW,4628,7,143.8032,-25.3214
+1,Queensland,QLD,New South Wales,NSW,4628,8,143.7822,-25.7084
+1,Queensland,QLD,New South Wales,NSW,4628,9,143.781,-26.0915
+1,Queensland,QLD,New South Wales,NSW,4628,10,143.7994,-26.4706
+1,Queensland,QLD,New South Wales,NSW,4628,11,143.8374,-26.8457
+1,Queensland,QLD,New South Wales,NSW,4628,12,143.8952,-27.2167
+1,Queensland,QLD,New South Wales,NSW,4628,13,143.9725,-27.5838
+1,Queensland,QLD,New South Wales,NSW,4628,14,144.0695,-27.9469
+1,Queensland,QLD,New South Wales,NSW,4628,15,144.1862,-28.306
+1,Queensland,QLD,New South Wales,NSW,4628,16,144.3226,-28.6611
+1,Queensland,QLD,New South Wales,NSW,4628,17,144.4786,-29.0122
+1,Queensland,QLD,New South Wales,NSW,4628,18,144.6542,-29.3593
+1,Queensland,QLD,New South Wales,NSW,4628,19,144.8495,-29.7024
+1,Queensland,QLD,New South Wales,NSW,4628,20,145.0645,-30.0415
+1,Queensland,QLD,New South Wales,NSW,4628,21,145.2991,-30.3766
+1,Queensland,QLD,New South Wales,NSW,4628,22,145.5534,-30.7077
+1,Queensland,QLD,New South Wales,NSW,4628,23,145.8274,-31.0348
+1,Queensland,QLD,New South Wales,NSW,4628,24,146.121,-31.3579
+2,South Australia,SA,New South Wales,NSW,497,0,135.8,-30.0
+2,South Australia,SA,New South Wales,NSW,497,1,136.1606,-30.304
+2,South Australia,SA,New South Wales,NSW,497,2,136.5259,-30.5908
+2,South Australia,SA,New South Wales,NSW,497,3,136.8958,-30.8603
+2,South Australia,SA,New South Wales,NSW,497,4,137.2703,-31.1126
+2,South Australia,SA,New South Wales,NSW,497,5,137.6495,-31.3475
+2,South Australia,SA,New South Wales,NSW,497,6,138.0333,-31.5653
+2,South Australia,SA,New South Wales,NSW,497,7,138.4217,-31.7657
+2,South Australia,SA,New South Wales,NSW,497,8,138.8147,-31.9489
+2,South Australia,SA,New South Wales,NSW,497,9,139.2123,-32.1149
+2,South Australia,SA,New South Wales,NSW,497,10,139.6146,-32.2635
+2,South Australia,SA,New South Wales,NSW,497,11,140.0215,-32.3949
+2,South Australia,SA,New South Wales,NSW,497,12,140.433,-32.5091
+2,South Australia,SA,New South Wales,NSW,497,13,140.8492,-32.606
+2,South Australia,SA,New South Wales,NSW,497,14,141.2699,-32.6856
+2,South Australia,SA,New South Wales,NSW,497,15,141.6953,-32.748
+2,South Australia,SA,New South Wales,NSW,497,16,142.1254,-32.7931
+2,South Australia,SA,New South Wales,NSW,497,17,142.56,-32.8209
+2,South Australia,SA,New South Wales,NSW,497,18,142.9993,-32.8315
+2,South Australia,SA,New South Wales,NSW,497,19,143.4432,-32.8248
+2,South Australia,SA,New South Wales,NSW,497,20,143.8917,-32.8008
+2,South Australia,SA,New South Wales,NSW,497,21,144.3448,-32.7596
+2,South Australia,SA,New South Wales,NSW,497,22,144.8026,-32.7011
+2,South Australia,SA,New South Wales,NSW,497,23,145.265,-32.6254
+2,South Australia,SA,New South Wales,NSW,497,24,145.732,-32.5324
+3,Western Australia,WA,New South Wales,NSW,395,0,121.5,-25.5
+3,Western Australia,WA,New South Wales,NSW,395,1,122.2795,-26.2672
+3,Western Australia,WA,New South Wales,NSW,395,2,123.0729,-26.9942
+3,Western Australia,WA,New South Wales,NSW,395,3,123.88,-27.681
+3,Western Australia,WA,New South Wales,NSW,395,4,124.7008,-28.3275
+3,Western Australia,WA,New South Wales,NSW,395,5,125.5354,-28.9339
+3,Western Australia,WA,New South Wales,NSW,395,6,126.3838,-29.5001
+3,Western Australia,WA,New South Wales,NSW,395,7,127.246,-30.0261
+3,Western Australia,WA,New South Wales,NSW,395,8,128.1219,-30.5118
+3,Western Australia,WA,New South Wales,NSW,395,9,129.0116,-30.9574
+3,Western Australia,WA,New South Wales,NSW,395,10,129.9151,-31.3628
+3,Western Australia,WA,New South Wales,NSW,395,11,130.8323,-31.7279
+3,Western Australia,WA,New South Wales,NSW,395,12,131.7633,-32.0529
+3,Western Australia,WA,New South Wales,NSW,395,13,132.7081,-32.3376
+3,Western Australia,WA,New South Wales,NSW,395,14,133.6667,-32.5822
+3,Western Australia,WA,New South Wales,NSW,395,15,134.639,-32.7865
+3,Western Australia,WA,New South Wales,NSW,395,16,135.6251,-32.9507
+3,Western Australia,WA,New South Wales,NSW,395,17,136.6249,-33.0746
+3,Western Australia,WA,New South Wales,NSW,395,18,137.6385,-33.1583
+3,Western Australia,WA,New South Wales,NSW,395,19,138.6659,-33.2019
+3,Western Australia,WA,New South Wales,NSW,395,20,139.7071,-33.2052
+3,Western Australia,WA,New South Wales,NSW,395,21,140.762,-33.1683
+3,Western Australia,WA,New South Wales,NSW,395,22,141.8307,-33.0913
+3,Western Australia,WA,New South Wales,NSW,395,23,142.9132,-32.974
+3,Western Australia,WA,New South Wales,NSW,395,24,144.0094,-32.8165
+4,Tasmania,TAS,New South Wales,NSW,183,0,146.6,-41.75
+4,Tasmania,TAS,New South Wales,NSW,183,1,146.8911,-41.3993
+4,Tasmania,TAS,New South Wales,NSW,183,2,147.1608,-41.0479
+4,Tasmania,TAS,New South Wales,NSW,183,3,147.4089,-40.696
+4,Tasmania,TAS,New South Wales,NSW,183,4,147.6354,-40.3436
+4,Tasmania,TAS,New South Wales,NSW,183,5,147.8405,-39.9905
+4,Tasmania,TAS,New South Wales,NSW,183,6,148.0241,-39.6369
+4,Tasmania,TAS,New South Wales,NSW,183,7,148.1861,-39.2827
+4,Tasmania,TAS,New South Wales,NSW,183,8,148.3266,-38.9279
+4,Tasmania,TAS,New South Wales,NSW,183,9,148.4456,-38.5726
+4,Tasmania,TAS,New South Wales,NSW,183,10,148.5431,-38.2167
+4,Tasmania,TAS,New South Wales,NSW,183,11,148.6191,-37.8602
+4,Tasmania,TAS,New South Wales,NSW,183,12,148.6735,-37.5031
+4,Tasmania,TAS,New South Wales,NSW,183,13,148.7064,-37.1455
+4,Tasmania,TAS,New South Wales,NSW,183,14,148.7179,-36.7873
+4,Tasmania,TAS,New South Wales,NSW,183,15,148.7077,-36.4285
+4,Tasmania,TAS,New South Wales,NSW,183,16,148.6761,-36.0691
+4,Tasmania,TAS,New South Wales,NSW,183,17,148.623,-35.7091
+4,Tasmania,TAS,New South Wales,NSW,183,18,148.5483,-35.3486
+4,Tasmania,TAS,New South Wales,NSW,183,19,148.4522,-34.9875
+4,Tasmania,TAS,New South Wales,NSW,183,20,148.3345,-34.6258
+4,Tasmania,TAS,New South Wales,NSW,183,21,148.1953,-34.2636
+4,Tasmania,TAS,New South Wales,NSW,183,22,148.0345,-33.9008
+4,Tasmania,TAS,New South Wales,NSW,183,23,147.8523,-33.5374
+4,Tasmania,TAS,New South Wales,NSW,183,24,147.6485,-33.1734
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,0,149.0,-35.5
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,1,149.0168,-35.3379
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,2,149.0264,-35.1788
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,3,149.0289,-35.0226
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,4,149.0242,-34.8695
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,5,149.0124,-34.7193
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,6,148.9934,-34.5721
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,7,148.9673,-34.428
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,8,148.934,-34.2868
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,9,148.8936,-34.1486
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,10,148.846,-34.0134
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,11,148.7913,-33.8811
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,12,148.7294,-33.7519
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,13,148.6604,-33.6257
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,14,148.5842,-33.5024
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,15,148.5008,-33.3821
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,16,148.4103,-33.2649
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,17,148.3127,-33.1506
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,18,148.2079,-33.0393
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,19,148.0959,-32.931
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,20,147.9768,-32.8257
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,21,147.8506,-32.7234
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,22,147.7172,-32.624
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,23,147.5766,-32.5277
+5,Australian Capital Territory,ACT,New South Wales,NSW,1833,24,147.4289,-32.4343
+6,New South Wales,NSW,Victoria,VIC,3731,0,147.0,-32.2
+6,New South Wales,NSW,Victoria,VIC,3731,1,146.7669,-32.3249
+6,New South Wales,NSW,Victoria,VIC,3731,2,146.5441,-32.4538
+6,New South Wales,NSW,Victoria,VIC,3731,3,146.3316,-32.5866
+6,New South Wales,NSW,Victoria,VIC,3731,4,146.1294,-32.7235
+6,New South Wales,NSW,Victoria,VIC,3731,5,145.9374,-32.8644
+6,New South Wales,NSW,Victoria,VIC,3731,6,145.7557,-33.0093
+6,New South Wales,NSW,Victoria,VIC,3731,7,145.5842,-33.1582
+6,New South Wales,NSW,Victoria,VIC,3731,8,145.4231,-33.3111
+6,New South Wales,NSW,Victoria,VIC,3731,9,145.2722,-33.468
+6,New South Wales,NSW,Victoria,VIC,3731,10,145.1315,-33.6289
+6,New South Wales,NSW,Victoria,VIC,3731,11,145.0012,-33.7938
+6,New South Wales,NSW,Victoria,VIC,3731,12,144.8811,-33.9627
+6,New South Wales,NSW,Victoria,VIC,3731,13,144.7713,-34.1357
+6,New South Wales,NSW,Victoria,VIC,3731,14,144.6718,-34.3126
+6,New South Wales,NSW,Victoria,VIC,3731,15,144.5825,-34.4935
+6,New South Wales,NSW,Victoria,VIC,3731,16,144.5035,-34.6784
+6,New South Wales,NSW,Victoria,VIC,3731,17,144.4348,-34.8673
+6,New South Wales,NSW,Victoria,VIC,3731,18,144.3763,-35.0603
+6,New South Wales,NSW,Victoria,VIC,3731,19,144.3281,-35.2572
+6,New South Wales,NSW,Victoria,VIC,3731,20,144.2902,-35.4581
+6,New South Wales,NSW,Victoria,VIC,3731,21,144.2626,-35.6631
+6,New South Wales,NSW,Victoria,VIC,3731,22,144.2452,-35.872
+6,New South Wales,NSW,Victoria,VIC,3731,23,144.2381,-36.085
+6,New South Wales,NSW,Victoria,VIC,3731,24,144.2413,-36.3019
+7,Queensland,QLD,Victoria,VIC,1620,0,144.5,-22.5
+7,Queensland,QLD,Victoria,VIC,1620,1,144.1096,-23.036
+7,Queensland,QLD,Victoria,VIC,1620,2,143.7489,-23.5723
+7,Queensland,QLD,Victoria,VIC,1620,3,143.4182,-24.1089
+7,Queensland,QLD,Victoria,VIC,1620,4,143.1173,-24.6458
+7,Queensland,QLD,Victoria,VIC,1620,5,142.8462,-25.1831
+7,Queensland,QLD,Victoria,VIC,1620,6,142.6049,-25.7206
+7,Queensland,QLD,Victoria,VIC,1620,7,142.3935,-26.2585
+7,Queensland,QLD,Victoria,VIC,1620,8,142.2119,-26.7967
+7,Queensland,QLD,Victoria,VIC,1620,9,142.0602,-27.3351
+7,Queensland,QLD,Victoria,VIC,1620,10,141.9383,-27.8739
+7,Queensland,QLD,Victoria,VIC,1620,11,141.8463,-28.4131
+7,Queensland,QLD,Victoria,VIC,1620,12,141.7841,-28.9525
+7,Queensland,QLD,Victoria,VIC,1620,13,141.7517,-29.4922
+7,Queensland,QLD,Victoria,VIC,1620,14,141.7492,-30.0323
+7,Queensland,QLD,Victoria,VIC,1620,15,141.7765,-30.5726
+7,Queensland,QLD,Victoria,VIC,1620,16,141.8336,-31.1133
+7,Queensland,QLD,Victoria,VIC,1620,17,141.9206,-31.6543
+7,Queensland,QLD,Victoria,VIC,1620,18,142.0375,-32.1956
+7,Queensland,QLD,Victoria,VIC,1620,19,142.1842,-32.7372
+7,Queensland,QLD,Victoria,VIC,1620,20,142.3607,-33.2792
+7,Queensland,QLD,Victoria,VIC,1620,21,142.567,-33.8214
+7,Queensland,QLD,Victoria,VIC,1620,22,142.8032,-34.3639
+7,Queensland,QLD,Victoria,VIC,1620,23,143.0692,-34.9068
+7,Queensland,QLD,Victoria,VIC,1620,24,143.3651,-35.45
+8,South Australia,SA,Victoria,VIC,1188,0,135.8,-30.0
+8,South Australia,SA,Victoria,VIC,1188,1,135.9277,-30.4226
+8,South Australia,SA,Victoria,VIC,1188,2,136.0703,-30.8324
+8,South Australia,SA,Victoria,VIC,1188,3,136.2278,-31.2294
+8,South Australia,SA,Victoria,VIC,1188,4,136.4002,-31.6137
+8,South Australia,SA,Victoria,VIC,1188,5,136.5875,-31.9852
+8,South Australia,SA,Victoria,VIC,1188,6,136.7896,-32.344
+8,South Australia,SA,Victoria,VIC,1188,7,137.0066,-32.69
+8,South Australia,SA,Victoria,VIC,1188,8,137.2385,-33.0232
+8,South Australia,SA,Victoria,VIC,1188,9,137.4854,-33.3436
+8,South Australia,SA,Victoria,VIC,1188,10,137.747,-33.6513
+8,South Australia,SA,Victoria,VIC,1188,11,138.0236,-33.9462
+8,South Australia,SA,Victoria,VIC,1188,12,138.3151,-34.2284
+8,South Australia,SA,Victoria,VIC,1188,13,138.6214,-34.4978
+8,South Australia,SA,Victoria,VIC,1188,14,138.9426,-34.7544
+8,South Australia,SA,Victoria,VIC,1188,15,139.2788,-34.9983
+8,South Australia,SA,Victoria,VIC,1188,16,139.6298,-35.2293
+8,South Australia,SA,Victoria,VIC,1188,17,139.9957,-35.4477
+8,South Australia,SA,Victoria,VIC,1188,18,140.3764,-35.6532
+8,South Australia,SA,Victoria,VIC,1188,19,140.7721,-35.846
+8,South Australia,SA,Victoria,VIC,1188,20,141.1826,-36.0261
+8,South Australia,SA,Victoria,VIC,1188,21,141.6081,-36.1933
+8,South Australia,SA,Victoria,VIC,1188,22,142.0484,-36.3478
+8,South Australia,SA,Victoria,VIC,1188,23,142.5036,-36.4895
+8,South Australia,SA,Victoria,VIC,1188,24,142.9737,-36.6185
+9,Western Australia,WA,Victoria,VIC,621,0,121.5,-25.5
+9,Western Australia,WA,Victoria,VIC,621,1,122.0471,-26.378
+9,Western Australia,WA,Victoria,VIC,621,2,122.6183,-27.2209
+9,Western Australia,WA,Victoria,VIC,621,3,123.2134,-28.0287
+9,Western Australia,WA,Victoria,VIC,621,4,123.8325,-28.8014
+9,Western Australia,WA,Victoria,VIC,621,5,124.4756,-29.539
+9,Western Australia,WA,Victoria,VIC,621,6,125.1426,-30.2415
+9,Western Australia,WA,Victoria,VIC,621,7,125.8337,-30.9088
+9,Western Australia,WA,Victoria,VIC,621,8,126.5488,-31.5411
+9,Western Australia,WA,Victoria,VIC,621,9,127.2878,-32.1383
+9,Western Australia,WA,Victoria,VIC,621,10,128.0509,-32.7003
+9,Western Australia,WA,Victoria,VIC,621,11,128.8379,-33.2273
+9,Western Australia,WA,Victoria,VIC,621,12,129.6489,-33.7192
+9,Western Australia,WA,Victoria,VIC,621,13,130.4839,-34.1759
+9,Western Australia,WA,Victoria,VIC,621,14,131.3429,-34.5976
+9,Western Australia,WA,Victoria,VIC,621,15,132.2259,-34.9841
+9,Western Australia,WA,Victoria,VIC,621,16,133.1329,-35.3356
+9,Western Australia,WA,Victoria,VIC,621,17,134.0638,-35.6519
+9,Western Australia,WA,Victoria,VIC,621,18,135.0188,-35.9331
+9,Western Australia,WA,Victoria,VIC,621,19,135.9977,-36.1793
+9,Western Australia,WA,Victoria,VIC,621,20,137.0007,-36.3903
+9,Western Australia,WA,Victoria,VIC,621,21,138.0276,-36.5662
+9,Western Australia,WA,Victoria,VIC,621,22,139.0785,-36.707
+9,Western Australia,WA,Victoria,VIC,621,23,140.1534,-36.8127
+9,Western Australia,WA,Victoria,VIC,621,24,141.2523,-36.8833
+10,Tasmania,TAS,Victoria,VIC,444,0,146.6,-41.75
+10,Tasmania,TAS,Victoria,VIC,444,1,146.6586,-41.527
+10,Tasmania,TAS,Victoria,VIC,444,2,146.7059,-41.3073
+10,Tasmania,TAS,Victoria,VIC,444,3,146.7419,-41.0907
+10,Tasmania,TAS,Victoria,VIC,444,4,146.7666,-40.8773
+10,Tasmania,TAS,Victoria,VIC,444,5,146.78,-40.6672
+10,Tasmania,TAS,Victoria,VIC,444,6,146.7822,-40.4602
+10,Tasmania,TAS,Victoria,VIC,444,7,146.7731,-40.2564
+10,Tasmania,TAS,Victoria,VIC,444,8,146.7526,-40.0559
+10,Tasmania,TAS,Victoria,VIC,444,9,146.7209,-39.8585
+10,Tasmania,TAS,Victoria,VIC,444,10,146.678,-39.6644
+10,Tasmania,TAS,Victoria,VIC,444,11,146.6237,-39.4734
+10,Tasmania,TAS,Victoria,VIC,444,12,146.5581,-39.2857
+10,Tasmania,TAS,Victoria,VIC,444,13,146.4813,-39.1011
+10,Tasmania,TAS,Victoria,VIC,444,14,146.3931,-38.9198
+10,Tasmania,TAS,Victoria,VIC,444,15,146.2937,-38.7417
+10,Tasmania,TAS,Victoria,VIC,444,16,146.183,-38.5667
+10,Tasmania,TAS,Victoria,VIC,444,17,146.061,-38.395
+10,Tasmania,TAS,Victoria,VIC,444,18,145.9278,-38.2265
+10,Tasmania,TAS,Victoria,VIC,444,19,145.7832,-38.0611
+10,Tasmania,TAS,Victoria,VIC,444,20,145.6274,-37.899
+10,Tasmania,TAS,Victoria,VIC,444,21,145.4602,-37.7401
+10,Tasmania,TAS,Victoria,VIC,444,22,145.2818,-37.5844
+10,Tasmania,TAS,Victoria,VIC,444,23,145.0921,-37.4318
+10,Tasmania,TAS,Victoria,VIC,444,24,144.8911,-37.2825
+11,Australian Capital Territory,ACT,Victoria,VIC,336,0,149.0,-35.5
+11,Australian Capital Territory,ACT,Victoria,VIC,336,1,148.7837,-35.4649
+11,Australian Capital Territory,ACT,Victoria,VIC,336,2,148.5705,-35.4366
+11,Australian Capital Territory,ACT,Victoria,VIC,336,3,148.3604,-35.4151
+11,Australian Capital Territory,ACT,Victoria,VIC,336,4,148.1534,-35.4005
+11,Australian Capital Territory,ACT,Victoria,VIC,336,5,147.9496,-35.3927
+11,Australian Capital Territory,ACT,Victoria,VIC,336,6,147.7489,-35.3917
+11,Australian Capital Territory,ACT,Victoria,VIC,336,7,147.5513,-35.3976
+11,Australian Capital Territory,ACT,Victoria,VIC,336,8,147.3568,-35.4103
+11,Australian Capital Territory,ACT,Victoria,VIC,336,9,147.1655,-35.4298
+11,Australian Capital Territory,ACT,Victoria,VIC,336,10,146.9773,-35.4561
+11,Australian Capital Territory,ACT,Victoria,VIC,336,11,146.7922,-35.4893
+11,Australian Capital Territory,ACT,Victoria,VIC,336,12,146.6102,-35.5292
+11,Australian Capital Territory,ACT,Victoria,VIC,336,13,146.4313,-35.576
+11,Australian Capital Territory,ACT,Victoria,VIC,336,14,146.2556,-35.6297
+11,Australian Capital Territory,ACT,Victoria,VIC,336,15,146.083,-35.6901
+11,Australian Capital Territory,ACT,Victoria,VIC,336,16,145.9135,-35.7574
+11,Australian Capital Territory,ACT,Victoria,VIC,336,17,145.7472,-35.8316
+11,Australian Capital Territory,ACT,Victoria,VIC,336,18,145.5839,-35.9125
+11,Australian Capital Territory,ACT,Victoria,VIC,336,19,145.4238,-36.0003
+11,Australian Capital Territory,ACT,Victoria,VIC,336,20,145.2668,-36.0949
+11,Australian Capital Territory,ACT,Victoria,VIC,336,21,145.1129,-36.1963
+11,Australian Capital Territory,ACT,Victoria,VIC,336,22,144.9622,-36.3046
+11,Australian Capital Territory,ACT,Victoria,VIC,336,23,144.8146,-36.4196
+11,Australian Capital Territory,ACT,Victoria,VIC,336,24,144.6701,-36.5415
+12,New South Wales,NSW,Queensland,QLD,4588,0,147.0,-32.2
+12,New South Wales,NSW,Queensland,QLD,4588,1,147.1585,-31.785
+12,New South Wales,NSW,Queensland,QLD,4588,2,147.2974,-31.3739
+12,New South Wales,NSW,Queensland,QLD,4588,3,147.4166,-30.9669
+12,New South Wales,NSW,Queensland,QLD,4588,4,147.5161,-30.5638
+12,New South Wales,NSW,Queensland,QLD,4588,5,147.596,-30.1647
+12,New South Wales,NSW,Queensland,QLD,4588,6,147.6563,-29.7697
+12,New South Wales,NSW,Queensland,QLD,4588,7,147.6968,-29.3786
+12,New South Wales,NSW,Queensland,QLD,4588,8,147.7178,-28.9916
+12,New South Wales,NSW,Queensland,QLD,4588,9,147.719,-28.6085
+12,New South Wales,NSW,Queensland,QLD,4588,10,147.7006,-28.2294
+12,New South Wales,NSW,Queensland,QLD,4588,11,147.6626,-27.8543
+12,New South Wales,NSW,Queensland,QLD,4588,12,147.6048,-27.4833
+12,New South Wales,NSW,Queensland,QLD,4588,13,147.5275,-27.1162
+12,New South Wales,NSW,Queensland,QLD,4588,14,147.4305,-26.7531
+12,New South Wales,NSW,Queensland,QLD,4588,15,147.3138,-26.394
+12,New South Wales,NSW,Queensland,QLD,4588,16,147.1774,-26.0389
+12,New South Wales,NSW,Queensland,QLD,4588,17,147.0214,-25.6878
+12,New South Wales,NSW,Queensland,QLD,4588,18,146.8458,-25.3407
+12,New South Wales,NSW,Queensland,QLD,4588,19,146.6505,-24.9976
+12,New South Wales,NSW,Queensland,QLD,4588,20,146.4355,-24.6585
+12,New South Wales,NSW,Queensland,QLD,4588,21,146.2009,-24.3234
+12,New South Wales,NSW,Queensland,QLD,4588,22,145.9466,-23.9923
+12,New South Wales,NSW,Queensland,QLD,4588,23,145.6726,-23.6652
+12,New South Wales,NSW,Queensland,QLD,4588,24,145.379,-23.3421
+13,Victoria,VIC,Queensland,QLD,2389,0,144.3,-36.9
+13,Victoria,VIC,Queensland,QLD,2389,1,144.6904,-36.364
+13,Victoria,VIC,Queensland,QLD,2389,2,145.0511,-35.8277
+13,Victoria,VIC,Queensland,QLD,2389,3,145.3818,-35.2911
+13,Victoria,VIC,Queensland,QLD,2389,4,145.6827,-34.7542
+13,Victoria,VIC,Queensland,QLD,2389,5,145.9538,-34.2169
+13,Victoria,VIC,Queensland,QLD,2389,6,146.1951,-33.6794
+13,Victoria,VIC,Queensland,QLD,2389,7,146.4065,-33.1415
+13,Victoria,VIC,Queensland,QLD,2389,8,146.5881,-32.6033
+13,Victoria,VIC,Queensland,QLD,2389,9,146.7398,-32.0649
+13,Victoria,VIC,Queensland,QLD,2389,10,146.8617,-31.5261
+13,Victoria,VIC,Queensland,QLD,2389,11,146.9537,-30.9869
+13,Victoria,VIC,Queensland,QLD,2389,12,147.0159,-30.4475
+13,Victoria,VIC,Queensland,QLD,2389,13,147.0483,-29.9078
+13,Victoria,VIC,Queensland,QLD,2389,14,147.0508,-29.3677
+13,Victoria,VIC,Queensland,QLD,2389,15,147.0235,-28.8274
+13,Victoria,VIC,Queensland,QLD,2389,16,146.9664,-28.2867
+13,Victoria,VIC,Queensland,QLD,2389,17,146.8794,-27.7457
+13,Victoria,VIC,Queensland,QLD,2389,18,146.7625,-27.2044
+13,Victoria,VIC,Queensland,QLD,2389,19,146.6158,-26.6628
+13,Victoria,VIC,Queensland,QLD,2389,20,146.4393,-26.1208
+13,Victoria,VIC,Queensland,QLD,2389,21,146.233,-25.5786
+13,Victoria,VIC,Queensland,QLD,2389,22,145.9968,-25.0361
+13,Victoria,VIC,Queensland,QLD,2389,23,145.7308,-24.4932
+13,Victoria,VIC,Queensland,QLD,2389,24,145.4349,-23.95
+14,South Australia,SA,Queensland,QLD,375,0,135.8,-30.0
+14,South Australia,SA,Queensland,QLD,375,1,136.3194,-29.899
+14,South Australia,SA,Queensland,QLD,375,2,136.8238,-29.7839
+14,South Australia,SA,Queensland,QLD,375,3,137.3131,-29.6548
+14,South Australia,SA,Queensland,QLD,375,4,137.7874,-29.5117
+14,South Australia,SA,Queensland,QLD,375,5,138.2466,-29.3545
+14,South Australia,SA,Queensland,QLD,375,6,138.6907,-29.1833
+14,South Australia,SA,Queensland,QLD,375,7,139.1199,-28.998
+14,South Australia,SA,Queensland,QLD,375,8,139.5339,-28.7987
+14,South Australia,SA,Queensland,QLD,375,9,139.9329,-28.5853
+14,South Australia,SA,Queensland,QLD,375,10,140.3169,-28.3579
+14,South Australia,SA,Queensland,QLD,375,11,140.6858,-28.1165
+14,South Australia,SA,Queensland,QLD,375,12,141.0396,-27.861
+14,South Australia,SA,Queensland,QLD,375,13,141.3784,-27.5914
+14,South Australia,SA,Queensland,QLD,375,14,141.7021,-27.3078
+14,South Australia,SA,Queensland,QLD,375,15,142.0108,-27.0102
+14,South Australia,SA,Queensland,QLD,375,16,142.3045,-26.6985
+14,South Australia,SA,Queensland,QLD,375,17,142.583,-26.3728
+14,South Australia,SA,Queensland,QLD,375,18,142.8466,-26.033
+14,South Australia,SA,Queensland,QLD,375,19,143.0951,-25.6792
+14,South Australia,SA,Queensland,QLD,375,20,143.3285,-25.3113
+14,South Australia,SA,Queensland,QLD,375,21,143.5469,-24.9294
+14,South Australia,SA,Queensland,QLD,375,22,143.7502,-24.5335
+14,South Australia,SA,Queensland,QLD,375,23,143.9385,-24.1235
+14,South Australia,SA,Queensland,QLD,375,24,144.1117,-23.6994
+15,Western Australia,WA,Queensland,QLD,318,0,121.5,-25.5
+15,Western Australia,WA,Queensland,QLD,318,1,122.4384,-25.8729
+15,Western Australia,WA,Queensland,QLD,318,2,123.3708,-26.2079
+15,Western Australia,WA,Queensland,QLD,318,3,124.2973,-26.5051
+15,Western Australia,WA,Queensland,QLD,318,4,125.218,-26.7645
+15,Western Australia,WA,Queensland,QLD,318,5,126.1327,-26.9861
+15,Western Australia,WA,Queensland,QLD,318,6,127.0415,-27.1699
+15,Western Australia,WA,Queensland,QLD,318,7,127.9444,-27.3158
+15,Western Australia,WA,Queensland,QLD,318,8,128.8414,-27.424
+15,Western Australia,WA,Queensland,QLD,318,9,129.7324,-27.4943
+15,Western Australia,WA,Queensland,QLD,318,10,130.6176,-27.5267
+15,Western Australia,WA,Queensland,QLD,318,11,131.4968,-27.5214
+15,Western Australia,WA,Queensland,QLD,318,12,132.3702,-27.4782
+15,Western Australia,WA,Queensland,QLD,318,13,133.2376,-27.3972
+15,Western Australia,WA,Queensland,QLD,318,14,134.0991,-27.2784
+15,Western Australia,WA,Queensland,QLD,318,15,134.9547,-27.1218
+15,Western Australia,WA,Queensland,QLD,318,16,135.8044,-26.9274
+15,Western Australia,WA,Queensland,QLD,318,17,136.6482,-26.6951
+15,Western Australia,WA,Queensland,QLD,318,18,137.4861,-26.425
+15,Western Australia,WA,Queensland,QLD,318,19,138.318,-26.1171
+15,Western Australia,WA,Queensland,QLD,318,20,139.1441,-25.7714
+15,Western Australia,WA,Queensland,QLD,318,21,139.9642,-25.3878
+15,Western Australia,WA,Queensland,QLD,318,22,140.7784,-24.9665
+15,Western Australia,WA,Queensland,QLD,318,23,141.5867,-24.5073
+15,Western Australia,WA,Queensland,QLD,318,24,142.3892,-24.0103
+16,Tasmania,TAS,Queensland,QLD,163,0,146.6,-41.75
+16,Tasmania,TAS,Queensland,QLD,163,1,147.0463,-40.987
+16,Tasmania,TAS,Queensland,QLD,163,2,147.4517,-40.2273
+16,Tasmania,TAS,Queensland,QLD,163,3,147.8162,-39.4707
+16,Tasmania,TAS,Queensland,QLD,163,4,148.1398,-38.7174
+16,Tasmania,TAS,Queensland,QLD,163,5,148.4224,-37.9672
+16,Tasmania,TAS,Queensland,QLD,163,6,148.6642,-37.2203
+16,Tasmania,TAS,Queensland,QLD,163,7,148.865,-36.4765
+16,Tasmania,TAS,Queensland,QLD,163,8,149.0249,-35.736
+16,Tasmania,TAS,Queensland,QLD,163,9,149.1439,-34.9986
+16,Tasmania,TAS,Queensland,QLD,163,10,149.222,-34.2645
+16,Tasmania,TAS,Queensland,QLD,163,11,149.2592,-33.5335
+16,Tasmania,TAS,Queensland,QLD,163,12,149.2555,-32.8058
+16,Tasmania,TAS,Queensland,QLD,163,13,149.2108,-32.0812
+16,Tasmania,TAS,Queensland,QLD,163,14,149.1252,-31.3599
+16,Tasmania,TAS,Queensland,QLD,163,15,148.9988,-30.6418
+16,Tasmania,TAS,Queensland,QLD,163,16,148.8314,-29.9268
+16,Tasmania,TAS,Queensland,QLD,163,17,148.6231,-29.2151
+16,Tasmania,TAS,Queensland,QLD,163,18,148.3738,-28.5066
+16,Tasmania,TAS,Queensland,QLD,163,19,148.0837,-27.8012
+16,Tasmania,TAS,Queensland,QLD,163,20,147.7526,-27.0991
+16,Tasmania,TAS,Queensland,QLD,163,21,147.3807,-26.4002
+16,Tasmania,TAS,Queensland,QLD,163,22,146.9678,-25.7044
+16,Tasmania,TAS,Queensland,QLD,163,23,146.514,-25.0119
+16,Tasmania,TAS,Queensland,QLD,163,24,146.0193,-24.3226
+17,Northern Territory,NT,Queensland,QLD,124,0,133.4,-19.5
+17,Northern Territory,NT,Queensland,QLD,124,1,133.742,-19.8519
+17,Northern Territory,NT,Queensland,QLD,124,2,134.0898,-20.1851
+17,Northern Territory,NT,Queensland,QLD,124,3,134.4434,-20.4997
+17,Northern Territory,NT,Queensland,QLD,124,4,134.8028,-20.7956
+17,Northern Territory,NT,Queensland,QLD,124,5,135.1679,-21.0729
+17,Northern Territory,NT,Queensland,QLD,124,6,135.5389,-21.3315
+17,Northern Territory,NT,Queensland,QLD,124,7,135.9156,-21.5714
+17,Northern Territory,NT,Queensland,QLD,124,8,136.2981,-21.7928
+17,Northern Territory,NT,Queensland,QLD,124,9,136.6864,-21.9954
+17,Northern Territory,NT,Queensland,QLD,124,10,137.0805,-22.1794
+17,Northern Territory,NT,Queensland,QLD,124,11,137.4803,-22.3448
+17,Northern Territory,NT,Queensland,QLD,124,12,137.886,-22.4915
+17,Northern Territory,NT,Queensland,QLD,124,13,138.2974,-22.6195
+17,Northern Territory,NT,Queensland,QLD,124,14,138.7146,-22.7289
+17,Northern Territory,NT,Queensland,QLD,124,15,139.1376,-22.8196
+17,Northern Territory,NT,Queensland,QLD,124,16,139.5664,-22.8917
+17,Northern Territory,NT,Queensland,QLD,124,17,140.001,-22.9451
+17,Northern Territory,NT,Queensland,QLD,124,18,140.4413,-22.9799
+17,Northern Territory,NT,Queensland,QLD,124,19,140.8875,-22.9961
+17,Northern Territory,NT,Queensland,QLD,124,20,141.3394,-22.9935
+17,Northern Territory,NT,Queensland,QLD,124,21,141.7971,-22.9723
+17,Northern Territory,NT,Queensland,QLD,124,22,142.2606,-22.9325
+17,Northern Territory,NT,Queensland,QLD,124,23,142.7299,-22.874
+17,Northern Territory,NT,Queensland,QLD,124,24,143.2049,-22.7969
+18,Australian Capital Territory,ACT,Queensland,QLD,175,0,149.0,-35.5
+18,Australian Capital Territory,ACT,Queensland,QLD,175,1,149.1746,-34.9216
+18,Australian Capital Territory,ACT,Queensland,QLD,175,2,149.3224,-34.3503
+18,Australian Capital Territory,ACT,Queensland,QLD,175,3,149.4435,-33.786
+18,Australian Capital Territory,ACT,Queensland,QLD,175,4,149.5379,-33.2288
+18,Australian Capital Territory,ACT,Queensland,QLD,175,5,149.6055,-32.6788
+18,Australian Capital Territory,ACT,Queensland,QLD,175,6,149.6463,-32.1358
+18,Australian Capital Territory,ACT,Queensland,QLD,175,7,149.6604,-31.5999
+18,Australian Capital Territory,ACT,Queensland,QLD,175,8,149.6477,-31.071
+18,Australian Capital Territory,ACT,Queensland,QLD,175,9,149.6082,-30.5493
+18,Australian Capital Territory,ACT,Queensland,QLD,175,10,149.542,-30.0346
+18,Australian Capital Territory,ACT,Queensland,QLD,175,11,149.4491,-29.5271
+18,Australian Capital Territory,ACT,Queensland,QLD,175,12,149.3294,-29.0266
+18,Australian Capital Territory,ACT,Queensland,QLD,175,13,149.1829,-28.5332
+18,Australian Capital Territory,ACT,Queensland,QLD,175,14,149.0097,-28.0468
+18,Australian Capital Territory,ACT,Queensland,QLD,175,15,148.8098,-27.5676
+18,Australian Capital Territory,ACT,Queensland,QLD,175,16,148.583,-27.0955
+18,Australian Capital Territory,ACT,Queensland,QLD,175,17,148.3296,-26.6304
+18,Australian Capital Territory,ACT,Queensland,QLD,175,18,148.0493,-26.1724
+18,Australian Capital Territory,ACT,Queensland,QLD,175,19,147.7424,-25.7215
+18,Australian Capital Territory,ACT,Queensland,QLD,175,20,147.4086,-25.2777
+18,Australian Capital Territory,ACT,Queensland,QLD,175,21,147.0481,-24.841
+18,Australian Capital Territory,ACT,Queensland,QLD,175,22,146.6609,-24.4113
+18,Australian Capital Territory,ACT,Queensland,QLD,175,23,146.2469,-23.9888
+18,Australian Capital Territory,ACT,Queensland,QLD,175,24,145.8061,-23.5733
+19,New South Wales,NSW,South Australia,SA,798,0,147.0,-32.2
+19,New South Wales,NSW,South Australia,SA,798,1,146.6394,-31.896
+19,New South Wales,NSW,South Australia,SA,798,2,146.2741,-31.6092
+19,New South Wales,NSW,South Australia,SA,798,3,145.9042,-31.3397
+19,New South Wales,NSW,South Australia,SA,798,4,145.5297,-31.0874
+19,New South Wales,NSW,South Australia,SA,798,5,145.1505,-30.8525
+19,New South Wales,NSW,South Australia,SA,798,6,144.7667,-30.6347
+19,New South Wales,NSW,South Australia,SA,798,7,144.3783,-30.4343
+19,New South Wales,NSW,South Australia,SA,798,8,143.9853,-30.2511
+19,New South Wales,NSW,South Australia,SA,798,9,143.5877,-30.0851
+19,New South Wales,NSW,South Australia,SA,798,10,143.1854,-29.9365
+19,New South Wales,NSW,South Australia,SA,798,11,142.7785,-29.8051
+19,New South Wales,NSW,South Australia,SA,798,12,142.367,-29.6909
+19,New South Wales,NSW,South Australia,SA,798,13,141.9508,-29.594
+19,New South Wales,NSW,South Australia,SA,798,14,141.5301,-29.5144
+19,New South Wales,NSW,South Australia,SA,798,15,141.1047,-29.452
+19,New South Wales,NSW,South Australia,SA,798,16,140.6746,-29.4069
+19,New South Wales,NSW,South Australia,SA,798,17,140.24,-29.3791
+19,New South Wales,NSW,South Australia,SA,798,18,139.8007,-29.3685
+19,New South Wales,NSW,South Australia,SA,798,19,139.3568,-29.3752
+19,New South Wales,NSW,South Australia,SA,798,20,138.9083,-29.3992
+19,New South Wales,NSW,South Australia,SA,798,21,138.4552,-29.4404
+19,New South Wales,NSW,South Australia,SA,798,22,137.9974,-29.4989
+19,New South Wales,NSW,South Australia,SA,798,23,137.535,-29.5746
+19,New South Wales,NSW,South Australia,SA,798,24,137.068,-29.6676
+20,Victoria,VIC,South Australia,SA,1528,0,144.3,-36.9
+20,Victoria,VIC,South Australia,SA,1528,1,144.1723,-36.4774
+20,Victoria,VIC,South Australia,SA,1528,2,144.0297,-36.0676
+20,Victoria,VIC,South Australia,SA,1528,3,143.8722,-35.6706
+20,Victoria,VIC,South Australia,SA,1528,4,143.6998,-35.2863
+20,Victoria,VIC,South Australia,SA,1528,5,143.5125,-34.9148
+20,Victoria,VIC,South Australia,SA,1528,6,143.3104,-34.556
+20,Victoria,VIC,South Australia,SA,1528,7,143.0934,-34.21
+20,Victoria,VIC,South Australia,SA,1528,8,142.8615,-33.8768
+20,Victoria,VIC,South Australia,SA,1528,9,142.6146,-33.5564
+20,Victoria,VIC,South Australia,SA,1528,10,142.353,-33.2487
+20,Victoria,VIC,South Australia,SA,1528,11,142.0764,-32.9538
+20,Victoria,VIC,South Australia,SA,1528,12,141.7849,-32.6716
+20,Victoria,VIC,South Australia,SA,1528,13,141.4786,-32.4022
+20,Victoria,VIC,South Australia,SA,1528,14,141.1574,-32.1456
+20,Victoria,VIC,South Australia,SA,1528,15,140.8212,-31.9017
+20,Victoria,VIC,South Australia,SA,1528,16,140.4702,-31.6707
+20,Victoria,VIC,South Australia,SA,1528,17,140.1043,-31.4523
+20,Victoria,VIC,South Australia,SA,1528,18,139.7236,-31.2468
+20,Victoria,VIC,South Australia,SA,1528,19,139.3279,-31.054
+20,Victoria,VIC,South Australia,SA,1528,20,138.9174,-30.8739
+20,Victoria,VIC,South Australia,SA,1528,21,138.4919,-30.7067
+20,Victoria,VIC,South Australia,SA,1528,22,138.0516,-30.5522
+20,Victoria,VIC,South Australia,SA,1528,23,137.5964,-30.4105
+20,Victoria,VIC,South Australia,SA,1528,24,137.1263,-30.2815
+21,Queensland,QLD,South Australia,SA,382,0,144.5,-22.5
+21,Queensland,QLD,South Australia,SA,382,1,143.9806,-22.601
+21,Queensland,QLD,South Australia,SA,382,2,143.4762,-22.7161
+21,Queensland,QLD,South Australia,SA,382,3,142.9869,-22.8452
+21,Queensland,QLD,South Australia,SA,382,4,142.5126,-22.9883
+21,Queensland,QLD,South Australia,SA,382,5,142.0534,-23.1455
+21,Queensland,QLD,South Australia,SA,382,6,141.6093,-23.3167
+21,Queensland,QLD,South Australia,SA,382,7,141.1801,-23.502
+21,Queensland,QLD,South Australia,SA,382,8,140.7661,-23.7013
+21,Queensland,QLD,South Australia,SA,382,9,140.3671,-23.9147
+21,Queensland,QLD,South Australia,SA,382,10,139.9831,-24.1421
+21,Queensland,QLD,South Australia,SA,382,11,139.6142,-24.3835
+21,Queensland,QLD,South Australia,SA,382,12,139.2604,-24.639
+21,Queensland,QLD,South Australia,SA,382,13,138.9216,-24.9086
+21,Queensland,QLD,South Australia,SA,382,14,138.5979,-25.1922
+21,Queensland,QLD,South Australia,SA,382,15,138.2892,-25.4898
+21,Queensland,QLD,South Australia,SA,382,16,137.9955,-25.8015
+21,Queensland,QLD,South Australia,SA,382,17,137.717,-26.1272
+21,Queensland,QLD,South Australia,SA,382,18,137.4534,-26.467
+21,Queensland,QLD,South Australia,SA,382,19,137.2049,-26.8208
+21,Queensland,QLD,South Australia,SA,382,20,136.9715,-27.1887
+21,Queensland,QLD,South Australia,SA,382,21,136.7531,-27.5706
+21,Queensland,QLD,South Australia,SA,382,22,136.5498,-27.9665
+21,Queensland,QLD,South Australia,SA,382,23,136.3615,-28.3765
+21,Queensland,QLD,South Australia,SA,382,24,136.1883,-28.8006
+22,Western Australia,WA,South Australia,SA,210,0,121.5,-25.5
+22,Western Australia,WA,South Australia,SA,210,1,121.9188,-25.9611
+22,Western Australia,WA,South Australia,SA,210,2,122.3467,-26.3994
+22,Western Australia,WA,South Australia,SA,210,3,122.7838,-26.8149
+22,Western Australia,WA,South Australia,SA,210,4,123.2301,-27.2077
+22,Western Australia,WA,South Australia,SA,210,5,123.6855,-27.5776
+22,Western Australia,WA,South Australia,SA,210,6,124.15,-27.9248
+22,Western Australia,WA,South Australia,SA,210,7,124.6237,-28.2492
+22,Western Australia,WA,South Australia,SA,210,8,125.1066,-28.5509
+22,Western Australia,WA,South Australia,SA,210,9,125.5986,-28.8297
+22,Western Australia,WA,South Australia,SA,210,10,126.0998,-29.0858
+22,Western Australia,WA,South Australia,SA,210,11,126.6101,-29.3191
+22,Western Australia,WA,South Australia,SA,210,12,127.1296,-29.5296
+22,Western Australia,WA,South Australia,SA,210,13,127.6582,-29.7173
+22,Western Australia,WA,South Australia,SA,210,14,128.196,-29.8823
+22,Western Australia,WA,South Australia,SA,210,15,128.7429,-30.0245
+22,Western Australia,WA,South Australia,SA,210,16,129.299,-30.1439
+22,Western Australia,WA,South Australia,SA,210,17,129.8642,-30.2405
+22,Western Australia,WA,South Australia,SA,210,18,130.4386,-30.3143
+22,Western Australia,WA,South Australia,SA,210,19,131.0221,-30.3654
+22,Western Australia,WA,South Australia,SA,210,20,131.6148,-30.3936
+22,Western Australia,WA,South Australia,SA,210,21,132.2167,-30.3991
+22,Western Australia,WA,South Australia,SA,210,22,132.8277,-30.3819
+22,Western Australia,WA,South Australia,SA,210,23,133.4478,-30.3418
+22,Western Australia,WA,South Australia,SA,210,24,134.0771,-30.2789
+23,Northern Territory,NT,South Australia,SA,94,0,133.4,-19.5
+23,Northern Territory,NT,South Australia,SA,94,1,133.2229,-19.9441
+23,Northern Territory,NT,South Australia,SA,94,2,133.0666,-20.3843
+23,Northern Territory,NT,South Australia,SA,94,3,132.9312,-20.8205
+23,Northern Territory,NT,South Australia,SA,94,4,132.8165,-21.2529
+23,Northern Territory,NT,South Australia,SA,94,5,132.7227,-21.6813
+23,Northern Territory,NT,South Australia,SA,94,6,132.6497,-22.1057
+23,Northern Territory,NT,South Australia,SA,94,7,132.5975,-22.5263
+23,Northern Territory,NT,South Australia,SA,94,8,132.5661,-22.9429
+23,Northern Territory,NT,South Australia,SA,94,9,132.5555,-23.3556
+23,Northern Territory,NT,South Australia,SA,94,10,132.5657,-23.7644
+23,Northern Territory,NT,South Australia,SA,94,11,132.5967,-24.1693
+23,Northern Territory,NT,South Australia,SA,94,12,132.6486,-24.5702
+23,Northern Territory,NT,South Australia,SA,94,13,132.7212,-24.9673
+23,Northern Territory,NT,South Australia,SA,94,14,132.8147,-25.3604
+23,Northern Territory,NT,South Australia,SA,94,15,132.929,-25.7495
+23,Northern Territory,NT,South Australia,SA,94,16,133.0641,-26.1348
+23,Northern Territory,NT,South Australia,SA,94,17,133.22,-26.5161
+23,Northern Territory,NT,South Australia,SA,94,18,133.3967,-26.8935
+23,Northern Territory,NT,South Australia,SA,94,19,133.5942,-27.267
+23,Northern Territory,NT,South Australia,SA,94,20,133.8126,-27.6365
+23,Northern Territory,NT,South Australia,SA,94,21,134.0517,-28.0022
+23,Northern Territory,NT,South Australia,SA,94,22,134.3117,-28.3639
+23,Northern Territory,NT,South Australia,SA,94,23,134.5924,-28.7217
+23,Northern Territory,NT,South Australia,SA,94,24,134.894,-29.0755
+24,New South Wales,NSW,Western Australia,WA,519,0,147.0,-32.2
+24,New South Wales,NSW,Western Australia,WA,519,1,146.2205,-31.4328
+24,New South Wales,NSW,Western Australia,WA,519,2,145.4271,-30.7058
+24,New South Wales,NSW,Western Australia,WA,519,3,144.62,-30.019
+24,New South Wales,NSW,Western Australia,WA,519,4,143.7992,-29.3725
+24,New South Wales,NSW,Western Australia,WA,519,5,142.9646,-28.7661
+24,New South Wales,NSW,Western Australia,WA,519,6,142.1162,-28.1999
+24,New South Wales,NSW,Western Australia,WA,519,7,141.254,-27.6739
+24,New South Wales,NSW,Western Australia,WA,519,8,140.3781,-27.1882
+24,New South Wales,NSW,Western Australia,WA,519,9,139.4884,-26.7426
+24,New South Wales,NSW,Western Australia,WA,519,10,138.5849,-26.3372
+24,New South Wales,NSW,Western Australia,WA,519,11,137.6677,-25.9721
+24,New South Wales,NSW,Western Australia,WA,519,12,136.7367,-25.6471
+24,New South Wales,NSW,Western Australia,WA,519,13,135.7919,-25.3624
+24,New South Wales,NSW,Western Australia,WA,519,14,134.8333,-25.1178
+24,New South Wales,NSW,Western Australia,WA,519,15,133.861,-24.9135
+24,New South Wales,NSW,Western Australia,WA,519,16,132.8749,-24.7493
+24,New South Wales,NSW,Western Australia,WA,519,17,131.8751,-24.6254
+24,New South Wales,NSW,Western Australia,WA,519,18,130.8615,-24.5417
+24,New South Wales,NSW,Western Australia,WA,519,19,129.8341,-24.4981
+24,New South Wales,NSW,Western Australia,WA,519,20,128.7929,-24.4948
+24,New South Wales,NSW,Western Australia,WA,519,21,127.738,-24.5317
+24,New South Wales,NSW,Western Australia,WA,519,22,126.6693,-24.6087
+24,New South Wales,NSW,Western Australia,WA,519,23,125.5868,-24.726
+24,New South Wales,NSW,Western Australia,WA,519,24,124.4906,-24.8835
+25,Victoria,VIC,Western Australia,WA,531,0,144.3,-36.9
+25,Victoria,VIC,Western Australia,WA,531,1,143.7529,-36.022
+25,Victoria,VIC,Western Australia,WA,531,2,143.1817,-35.1791
+25,Victoria,VIC,Western Australia,WA,531,3,142.5866,-34.3713
+25,Victoria,VIC,Western Australia,WA,531,4,141.9675,-33.5986
+25,Victoria,VIC,Western Australia,WA,531,5,141.3244,-32.861
+25,Victoria,VIC,Western Australia,WA,531,6,140.6574,-32.1585
+25,Victoria,VIC,Western Australia,WA,531,7,139.9663,-31.4912
+25,Victoria,VIC,Western Australia,WA,531,8,139.2512,-30.8589
+25,Victoria,VIC,Western Australia,WA,531,9,138.5122,-30.2617
+25,Victoria,VIC,Western Australia,WA,531,10,137.7491,-29.6997
+25,Victoria,VIC,Western Australia,WA,531,11,136.9621,-29.1727
+25,Victoria,VIC,Western Australia,WA,531,12,136.1511,-28.6808
+25,Victoria,VIC,Western Australia,WA,531,13,135.3161,-28.2241
+25,Victoria,VIC,Western Australia,WA,531,14,134.4571,-27.8024
+25,Victoria,VIC,Western Australia,WA,531,15,133.5741,-27.4159
+25,Victoria,VIC,Western Australia,WA,531,16,132.6671,-27.0644
+25,Victoria,VIC,Western Australia,WA,531,17,131.7362,-26.7481
+25,Victoria,VIC,Western Australia,WA,531,18,130.7812,-26.4669
+25,Victoria,VIC,Western Australia,WA,531,19,129.8023,-26.2207
+25,Victoria,VIC,Western Australia,WA,531,20,128.7993,-26.0097
+25,Victoria,VIC,Western Australia,WA,531,21,127.7724,-25.8338
+25,Victoria,VIC,Western Australia,WA,531,22,126.7215,-25.693
+25,Victoria,VIC,Western Australia,WA,531,23,125.6466,-25.5873
+25,Victoria,VIC,Western Australia,WA,531,24,124.5477,-25.5167
+26,Queensland,QLD,Western Australia,WA,323,0,144.5,-22.5
+26,Queensland,QLD,Western Australia,WA,323,1,143.5616,-22.1271
+26,Queensland,QLD,Western Australia,WA,323,2,142.6292,-21.7921
+26,Queensland,QLD,Western Australia,WA,323,3,141.7027,-21.4949
+26,Queensland,QLD,Western Australia,WA,323,4,140.782,-21.2355
+26,Queensland,QLD,Western Australia,WA,323,5,139.8673,-21.0139
+26,Queensland,QLD,Western Australia,WA,323,6,138.9585,-20.8301
+26,Queensland,QLD,Western Australia,WA,323,7,138.0556,-20.6842
+26,Queensland,QLD,Western Australia,WA,323,8,137.1586,-20.576
+26,Queensland,QLD,Western Australia,WA,323,9,136.2676,-20.5057
+26,Queensland,QLD,Western Australia,WA,323,10,135.3824,-20.4733
+26,Queensland,QLD,Western Australia,WA,323,11,134.5032,-20.4786
+26,Queensland,QLD,Western Australia,WA,323,12,133.6298,-20.5218
+26,Queensland,QLD,Western Australia,WA,323,13,132.7624,-20.6028
+26,Queensland,QLD,Western Australia,WA,323,14,131.9009,-20.7216
+26,Queensland,QLD,Western Australia,WA,323,15,131.0453,-20.8782
+26,Queensland,QLD,Western Australia,WA,323,16,130.1956,-21.0726
+26,Queensland,QLD,Western Australia,WA,323,17,129.3518,-21.3049
+26,Queensland,QLD,Western Australia,WA,323,18,128.5139,-21.575
+26,Queensland,QLD,Western Australia,WA,323,19,127.682,-21.8829
+26,Queensland,QLD,Western Australia,WA,323,20,126.8559,-22.2286
+26,Queensland,QLD,Western Australia,WA,323,21,126.0358,-22.6122
+26,Queensland,QLD,Western Australia,WA,323,22,125.2216,-23.0335
+26,Queensland,QLD,Western Australia,WA,323,23,124.4133,-23.4927
+26,Queensland,QLD,Western Australia,WA,323,24,123.6108,-23.9897
+27,New South Wales,NSW,Tasmania,TAS,416,0,147.0,-32.2
+27,New South Wales,NSW,Tasmania,TAS,416,1,146.7089,-32.5507
+27,New South Wales,NSW,Tasmania,TAS,416,2,146.4392,-32.9021
+27,New South Wales,NSW,Tasmania,TAS,416,3,146.1911,-33.254
+27,New South Wales,NSW,Tasmania,TAS,416,4,145.9646,-33.6064
+27,New South Wales,NSW,Tasmania,TAS,416,5,145.7595,-33.9595
+27,New South Wales,NSW,Tasmania,TAS,416,6,145.5759,-34.3131
+27,New South Wales,NSW,Tasmania,TAS,416,7,145.4139,-34.6673
+27,New South Wales,NSW,Tasmania,TAS,416,8,145.2734,-35.0221
+27,New South Wales,NSW,Tasmania,TAS,416,9,145.1544,-35.3774
+27,New South Wales,NSW,Tasmania,TAS,416,10,145.0569,-35.7333
+27,New South Wales,NSW,Tasmania,TAS,416,11,144.9809,-36.0898
+27,New South Wales,NSW,Tasmania,TAS,416,12,144.9265,-36.4469
+27,New South Wales,NSW,Tasmania,TAS,416,13,144.8936,-36.8045
+27,New South Wales,NSW,Tasmania,TAS,416,14,144.8821,-37.1627
+27,New South Wales,NSW,Tasmania,TAS,416,15,144.8923,-37.5215
+27,New South Wales,NSW,Tasmania,TAS,416,16,144.9239,-37.8809
+27,New South Wales,NSW,Tasmania,TAS,416,17,144.977,-38.2409
+27,New South Wales,NSW,Tasmania,TAS,416,18,145.0517,-38.6014
+27,New South Wales,NSW,Tasmania,TAS,416,19,145.1478,-38.9625
+27,New South Wales,NSW,Tasmania,TAS,416,20,145.2655,-39.3242
+27,New South Wales,NSW,Tasmania,TAS,416,21,145.4047,-39.6864
+27,New South Wales,NSW,Tasmania,TAS,416,22,145.5655,-40.0492
+27,New South Wales,NSW,Tasmania,TAS,416,23,145.7477,-40.4126
+27,New South Wales,NSW,Tasmania,TAS,416,24,145.9515,-40.7766
+28,Victoria,VIC,Tasmania,TAS,669,0,144.3,-36.9
+28,Victoria,VIC,Tasmania,TAS,669,1,144.2414,-37.123
+28,Victoria,VIC,Tasmania,TAS,669,2,144.1941,-37.3427
+28,Victoria,VIC,Tasmania,TAS,669,3,144.1581,-37.5593
+28,Victoria,VIC,Tasmania,TAS,669,4,144.1334,-37.7727
+28,Victoria,VIC,Tasmania,TAS,669,5,144.12,-37.9828
+28,Victoria,VIC,Tasmania,TAS,669,6,144.1178,-38.1898
+28,Victoria,VIC,Tasmania,TAS,669,7,144.1269,-38.3936
+28,Victoria,VIC,Tasmania,TAS,669,8,144.1474,-38.5941
+28,Victoria,VIC,Tasmania,TAS,669,9,144.1791,-38.7915
+28,Victoria,VIC,Tasmania,TAS,669,10,144.222,-38.9856
+28,Victoria,VIC,Tasmania,TAS,669,11,144.2763,-39.1766
+28,Victoria,VIC,Tasmania,TAS,669,12,144.3419,-39.3643
+28,Victoria,VIC,Tasmania,TAS,669,13,144.4187,-39.5489
+28,Victoria,VIC,Tasmania,TAS,669,14,144.5069,-39.7302
+28,Victoria,VIC,Tasmania,TAS,669,15,144.6063,-39.9083
+28,Victoria,VIC,Tasmania,TAS,669,16,144.717,-40.0833
+28,Victoria,VIC,Tasmania,TAS,669,17,144.839,-40.255
+28,Victoria,VIC,Tasmania,TAS,669,18,144.9722,-40.4235
+28,Victoria,VIC,Tasmania,TAS,669,19,145.1168,-40.5889
+28,Victoria,VIC,Tasmania,TAS,669,20,145.2726,-40.751
+28,Victoria,VIC,Tasmania,TAS,669,21,145.4398,-40.9099
+28,Victoria,VIC,Tasmania,TAS,669,22,145.6182,-41.0656
+28,Victoria,VIC,Tasmania,TAS,669,23,145.8079,-41.2182
+28,Victoria,VIC,Tasmania,TAS,669,24,146.0089,-41.3675
+29,Queensland,QLD,Tasmania,TAS,229,0,144.5,-22.5
+29,Queensland,QLD,Tasmania,TAS,229,1,144.0537,-23.263
+29,Queensland,QLD,Tasmania,TAS,229,2,143.6483,-24.0227
+29,Queensland,QLD,Tasmania,TAS,229,3,143.2838,-24.7793
+29,Queensland,QLD,Tasmania,TAS,229,4,142.9602,-25.5326
+29,Queensland,QLD,Tasmania,TAS,229,5,142.6776,-26.2828
+29,Queensland,QLD,Tasmania,TAS,229,6,142.4358,-27.0297
+29,Queensland,QLD,Tasmania,TAS,229,7,142.235,-27.7735
+29,Queensland,QLD,Tasmania,TAS,229,8,142.0751,-28.514
+29,Queensland,QLD,Tasmania,TAS,229,9,141.9561,-29.2514
+29,Queensland,QLD,Tasmania,TAS,229,10,141.878,-29.9855
+29,Queensland,QLD,Tasmania,TAS,229,11,141.8408,-30.7165
+29,Queensland,QLD,Tasmania,TAS,229,12,141.8445,-31.4442
+29,Queensland,QLD,Tasmania,TAS,229,13,141.8892,-32.1688
+29,Queensland,QLD,Tasmania,TAS,229,14,141.9748,-32.8901
+29,Queensland,QLD,Tasmania,TAS,229,15,142.1012,-33.6082
+29,Queensland,QLD,Tasmania,TAS,229,16,142.2686,-34.3232
+29,Queensland,QLD,Tasmania,TAS,229,17,142.4769,-35.0349
+29,Queensland,QLD,Tasmania,TAS,229,18,142.7262,-35.7434
+29,Queensland,QLD,Tasmania,TAS,229,19,143.0163,-36.4488
+29,Queensland,QLD,Tasmania,TAS,229,20,143.3474,-37.1509
+29,Queensland,QLD,Tasmania,TAS,229,21,143.7193,-37.8498
+29,Queensland,QLD,Tasmania,TAS,229,22,144.1322,-38.5456
+29,Queensland,QLD,Tasmania,TAS,229,23,144.586,-39.2381
+29,Queensland,QLD,Tasmania,TAS,229,24,145.0807,-39.9274
+30,Queensland,QLD,Northern Territory,NT,284,0,144.5,-22.5
+30,Queensland,QLD,Northern Territory,NT,284,1,144.158,-22.1481
+30,Queensland,QLD,Northern Territory,NT,284,2,143.8102,-21.8149
+30,Queensland,QLD,Northern Territory,NT,284,3,143.4566,-21.5003
+30,Queensland,QLD,Northern Territory,NT,284,4,143.0972,-21.2044
+30,Queensland,QLD,Northern Territory,NT,284,5,142.7321,-20.9271
+30,Queensland,QLD,Northern Territory,NT,284,6,142.3611,-20.6685
+30,Queensland,QLD,Northern Territory,NT,284,7,141.9844,-20.4286
+30,Queensland,QLD,Northern Territory,NT,284,8,141.6019,-20.2072
+30,Queensland,QLD,Northern Territory,NT,284,9,141.2136,-20.0046
+30,Queensland,QLD,Northern Territory,NT,284,10,140.8195,-19.8206
+30,Queensland,QLD,Northern Territory,NT,284,11,140.4197,-19.6552
+30,Queensland,QLD,Northern Territory,NT,284,12,140.014,-19.5085
+30,Queensland,QLD,Northern Territory,NT,284,13,139.6026,-19.3805
+30,Queensland,QLD,Northern Territory,NT,284,14,139.1854,-19.2711
+30,Queensland,QLD,Northern Territory,NT,284,15,138.7624,-19.1804
+30,Queensland,QLD,Northern Territory,NT,284,16,138.3336,-19.1083
+30,Queensland,QLD,Northern Territory,NT,284,17,137.899,-19.0549
+30,Queensland,QLD,Northern Territory,NT,284,18,137.4587,-19.0201
+30,Queensland,QLD,Northern Territory,NT,284,19,137.0125,-19.0039
+30,Queensland,QLD,Northern Territory,NT,284,20,136.5606,-19.0065
+30,Queensland,QLD,Northern Territory,NT,284,21,136.1029,-19.0277
+30,Queensland,QLD,Northern Territory,NT,284,22,135.6394,-19.0675
+30,Queensland,QLD,Northern Territory,NT,284,23,135.1701,-19.126
+30,Queensland,QLD,Northern Territory,NT,284,24,134.6951,-19.2031
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,0,147.0,-32.2
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,1,146.9832,-32.3621
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,2,146.9736,-32.5212
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,3,146.9711,-32.6774
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,4,146.9758,-32.8305
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,5,146.9876,-32.9807
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,6,147.0066,-33.1279
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,7,147.0327,-33.272
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,8,147.066,-33.4132
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,9,147.1064,-33.5514
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,10,147.154,-33.6866
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,11,147.2087,-33.8189
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,12,147.2706,-33.9481
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,13,147.3396,-34.0743
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,14,147.4158,-34.1976
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,15,147.4992,-34.3179
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,16,147.5897,-34.4351
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,17,147.6873,-34.5494
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,18,147.7921,-34.6607
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,19,147.9041,-34.769
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,20,148.0232,-34.8743
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,21,148.1494,-34.9766
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,22,148.2828,-35.076
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,23,148.4234,-35.1723
+31,New South Wales,NSW,Australian Capital Territory,ACT,1876,24,148.5711,-35.2657
+32,Victoria,VIC,Australian Capital Territory,ACT,612,0,144.3,-36.9
+32,Victoria,VIC,Australian Capital Territory,ACT,612,1,144.5163,-36.9351
+32,Victoria,VIC,Australian Capital Territory,ACT,612,2,144.7295,-36.9634
+32,Victoria,VIC,Australian Capital Territory,ACT,612,3,144.9396,-36.9849
+32,Victoria,VIC,Australian Capital Territory,ACT,612,4,145.1466,-36.9995
+32,Victoria,VIC,Australian Capital Territory,ACT,612,5,145.3504,-37.0073
+32,Victoria,VIC,Australian Capital Territory,ACT,612,6,145.5511,-37.0083
+32,Victoria,VIC,Australian Capital Territory,ACT,612,7,145.7487,-37.0024
+32,Victoria,VIC,Australian Capital Territory,ACT,612,8,145.9432,-36.9897
+32,Victoria,VIC,Australian Capital Territory,ACT,612,9,146.1345,-36.9702
+32,Victoria,VIC,Australian Capital Territory,ACT,612,10,146.3227,-36.9439
+32,Victoria,VIC,Australian Capital Territory,ACT,612,11,146.5078,-36.9107
+32,Victoria,VIC,Australian Capital Territory,ACT,612,12,146.6898,-36.8708
+32,Victoria,VIC,Australian Capital Territory,ACT,612,13,146.8687,-36.824
+32,Victoria,VIC,Australian Capital Territory,ACT,612,14,147.0444,-36.7703
+32,Victoria,VIC,Australian Capital Territory,ACT,612,15,147.217,-36.7099
+32,Victoria,VIC,Australian Capital Territory,ACT,612,16,147.3865,-36.6426
+32,Victoria,VIC,Australian Capital Territory,ACT,612,17,147.5528,-36.5684
+32,Victoria,VIC,Australian Capital Territory,ACT,612,18,147.7161,-36.4875
+32,Victoria,VIC,Australian Capital Territory,ACT,612,19,147.8762,-36.3997
+32,Victoria,VIC,Australian Capital Territory,ACT,612,20,148.0332,-36.3051
+32,Victoria,VIC,Australian Capital Territory,ACT,612,21,148.1871,-36.2037
+32,Victoria,VIC,Australian Capital Territory,ACT,612,22,148.3378,-36.0954
+32,Victoria,VIC,Australian Capital Territory,ACT,612,23,148.4854,-35.9804
+32,Victoria,VIC,Australian Capital Territory,ACT,612,24,148.6299,-35.8585
+33,Queensland,QLD,Australian Capital Territory,ACT,374,0,144.5,-22.5
+33,Queensland,QLD,Australian Capital Territory,ACT,374,1,144.3254,-23.0784
+33,Queensland,QLD,Australian Capital Territory,ACT,374,2,144.1776,-23.6497
+33,Queensland,QLD,Australian Capital Territory,ACT,374,3,144.0565,-24.214
+33,Queensland,QLD,Australian Capital Territory,ACT,374,4,143.9621,-24.7712
+33,Queensland,QLD,Australian Capital Territory,ACT,374,5,143.8945,-25.3212
+33,Queensland,QLD,Australian Capital Territory,ACT,374,6,143.8537,-25.8642
+33,Queensland,QLD,Australian Capital Territory,ACT,374,7,143.8396,-26.4001
+33,Queensland,QLD,Australian Capital Territory,ACT,374,8,143.8523,-26.929
+33,Queensland,QLD,Australian Capital Territory,ACT,374,9,143.8918,-27.4507
+33,Queensland,QLD,Australian Capital Territory,ACT,374,10,143.958,-27.9654
+33,Queensland,QLD,Australian Capital Territory,ACT,374,11,144.0509,-28.4729
+33,Queensland,QLD,Australian Capital Territory,ACT,374,12,144.1706,-28.9734
+33,Queensland,QLD,Australian Capital Territory,ACT,374,13,144.3171,-29.4668
+33,Queensland,QLD,Australian Capital Territory,ACT,374,14,144.4903,-29.9532
+33,Queensland,QLD,Australian Capital Territory,ACT,374,15,144.6902,-30.4324
+33,Queensland,QLD,Australian Capital Territory,ACT,374,16,144.917,-30.9045
+33,Queensland,QLD,Australian Capital Territory,ACT,374,17,145.1704,-31.3696
+33,Queensland,QLD,Australian Capital Territory,ACT,374,18,145.4507,-31.8276
+33,Queensland,QLD,Australian Capital Territory,ACT,374,19,145.7576,-32.2785
+33,Queensland,QLD,Australian Capital Territory,ACT,374,20,146.0914,-32.7223
+33,Queensland,QLD,Australian Capital Territory,ACT,374,21,146.4519,-33.159
+33,Queensland,QLD,Australian Capital Territory,ACT,374,22,146.8391,-33.5887
+33,Queensland,QLD,Australian Capital Territory,ACT,374,23,147.2531,-34.0112
+33,Queensland,QLD,Australian Capital Territory,ACT,374,24,147.6939,-34.4267

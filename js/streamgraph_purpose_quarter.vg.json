@@ -1,0 +1,119 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Streamgraph: overnight trips per quarter by reason for the trip, March quarter 2025 to June quarter 2026. Band thickness shows the number of trips.",
+  "width": "container",
+  "height": 300,
+  "data": {
+    "url": "data/purpose_quarter.csv",
+    "format": {"type": "csv", "parse": {"quarter": "date:'%Y-%m'", "trips_000": "number"}}
+  },
+  "transform": [
+    {"calculate": "datum.trips_000 / 1000", "as": "trips_m"},
+    {
+      "calculate": "indexof(['Holiday', 'Visiting friends and relatives', 'Other', 'Business'], datum.purpose)",
+      "as": "band_order"
+    },
+    {
+      "stack": "trips_m",
+      "groupby": ["quarter"],
+      "offset": "center",
+      "sort": [{"field": "band_order", "order": "ascending"}],
+      "as": ["y0", "y1"]
+    },
+    {"calculate": "(datum.y0 + datum.y1) / 2", "as": "y_mid"},
+    {
+      "calculate": "['Jan to Mar', 'Apr to Jun', 'Jul to Sep', 'Oct to Dec'][quarter(datum.quarter) - 1] + ' ' + year(datum.quarter)",
+      "as": "quarter_label"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "quarter_label",
+      "type": "ordinal",
+      "title": null,
+      "sort": {"field": "quarter", "op": "min"},
+      "scale": {"padding": 0},
+      "axis": {"labelAngle": 0, "grid": false, "labelFontSize": 12}
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "interpolate": "monotone",
+        "opacity": 0.92,
+        "stroke": "#ffffff",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {"field": "y0", "type": "quantitative", "axis": null, "scale": {"domain": [0, 34]}},
+        "y2": {"field": "y1"},
+        "color": {
+          "field": "purpose",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": ["Holiday", "Visiting friends and relatives", "Business", "Other"],
+            "range": ["#2f6db5", "#8e5aa8", "#33414e", "#a9a39a"]
+          }
+        },
+        "tooltip": [
+          {"field": "purpose", "title": "Reason for trip"},
+          {"field": "quarter_label", "title": "Quarter"},
+          {"field": "trips_m", "title": "Overnight trips (millions)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "year(datum.quarter) == 2025 && quarter(datum.quarter) == 1 && datum.purpose != 'Other'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#ffffff"
+      },
+      "encoding": {"y": {"field": "y_mid", "type": "quantitative"}, "text": {"field": "purpose"}}
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "quarter_label": "Jul to Sep 2025",
+            "y": 32.8,
+            "label": "Business trips halved: 4.1 million in Jan to Mar 2025, 2.0 million in Apr to Jun 2026"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#33414e"
+      },
+      "encoding": {
+        "x": {"field": "quarter_label", "type": "ordinal"},
+        "y": {"field": "y", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3",
+    "view": {"stroke": null},
+    "axis": {
+      "labelFontSize": 13,
+      "labelColor": "#55606a",
+      "domainColor": "#b9b2a6",
+      "tickColor": "#b9b2a6",
+      "titleFontSize": 13
+    },
+    "legend": {"labelFontSize": 13, "titleFontSize": 13}
+  }
+}

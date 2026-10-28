@@ -1,0 +1,97 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Diverging bar chart: change in overnight trips from 2019 to 2024 for each capital city and regional area",
+  "width": "container",
+  "height": 380,
+  "data": {
+    "url": "data/capital_regional.csv",
+    "format": {
+      "type": "csv",
+      "parse": {"change": "number", "trips_2019_000": "number", "trips_2024_000": "number"}
+    }
+  },
+  "transform": [
+    {"calculate": "datum.type == 'Regional' ? datum.area : upper(datum.area)", "as": "label"},
+    {"calculate": "datum.trips_2019_000 / 1000", "as": "trips_2019_m"},
+    {"calculate": "datum.trips_2024_000 / 1000", "as": "trips_2024_m"}
+  ],
+  "encoding": {
+    "x": {
+      "field": "change",
+      "type": "quantitative",
+      "title": "Change in overnight trips, 2019 to 2024",
+      "scale": {"domain": [-0.25, 0.1]},
+      "axis": {"format": "+.0%", "values": [-0.2, -0.1, 0, 0.1]}
+    }
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "height": 14, "cornerRadiusEnd": 2},
+      "encoding": {
+        "color": {"condition": {"test": "datum.change < 0", "value": "#b8472e"}, "value": "#1f7a6d"},
+        "tooltip": [
+          {"field": "area", "title": "Area"},
+          {"field": "type", "title": "Type"},
+          {"field": "trips_2019_m", "title": "Trips in 2019 (millions)", "format": ".1f"},
+          {"field": "trips_2024_m", "title": "Trips in 2024 (millions)", "format": ".1f"},
+          {"field": "change", "title": "Change", "format": "+.1%"}
+        ],
+        "y": {
+          "field": "label",
+          "type": "nominal",
+          "title": null,
+          "sort": {"field": "change", "op": "min", "order": "ascending"},
+          "axis": {"domain": false, "ticks": false, "labelPadding": 8, "labelFontSize": 12}
+        }
+      }
+    },
+    {
+      "transform": [{"filter": "datum.change < 0"}],
+      "mark": {"type": "text", "fontSize": 12, "color": "#33414e", "align": "right", "dx": -4},
+      "encoding": {
+        "y": {
+          "field": "label",
+          "type": "nominal",
+          "title": null,
+          "sort": {"field": "change", "op": "min", "order": "ascending"},
+          "axis": {"domain": false, "ticks": false, "labelPadding": 8, "labelFontSize": 12}
+        },
+        "text": {"field": "change", "type": "quantitative", "format": "+.1%"}
+      }
+    },
+    {
+      "transform": [{"filter": "datum.change >= 0"}],
+      "mark": {"type": "text", "fontSize": 12, "color": "#33414e", "align": "left", "dx": 4},
+      "encoding": {
+        "y": {
+          "field": "label",
+          "type": "nominal",
+          "title": null,
+          "sort": {"field": "change", "op": "min", "order": "ascending"},
+          "axis": {"domain": false, "ticks": false, "labelPadding": 8, "labelFontSize": 12}
+        },
+        "text": {"field": "change", "type": "quantitative", "format": "+.1%"}
+      }
+    },
+    {
+      "data": {"values": [{"x": 0}]},
+      "mark": {"type": "rule", "color": "#55606a"},
+      "encoding": {"x": {"field": "x", "type": "quantitative"}}
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3",
+    "view": {"stroke": null},
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "labelColor": "#55606a",
+      "titleColor": "#55606a",
+      "titleFontWeight": "normal",
+      "domainColor": "#b9b2a6",
+      "tickColor": "#b9b2a6",
+      "gridColor": "#ece8e0"
+    },
+    "legend": {"labelFontSize": 13, "titleFontSize": 13}
+  }
+}

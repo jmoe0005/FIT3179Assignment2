@@ -1,210 +1,381 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Holidays at Home | Domestic Tourism in Australia</title>
-    <!-- Import Vega & Vega-Lite -->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- Import pure.css -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Holidays at Home | Domestic Tourism in Australia</title>
 
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Source+Sans+3:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Vega, Vega-Lite and Vega-Embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
 
-    <!-- CSS file -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
-  </head>
+  <!-- Pure.css grid -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css">
 
-  <body>
-    <div class="page">
-      <!-- Title -->
-      <div class="pure-g">
-        <div class="pure-u-1-1">
-          <h1>Holidays at Home</h1>
-          <p class="lede">
-            How Australians travel within their own country, and how COVID-19
-            changed it. An overnight trip is a trip of at least 40 km from home
-            that includes a night away.
-          </p>
+  <!-- Google fonts: Fraunces for headings, Source Sans 3 for text and charts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- ===================== Title ===================== -->
+    <div class="pure-g row">
+      <div class="pure-u-1 col">
+        <p class="section-number">Domestic tourism in Australia, 2019 to 2026</p>
+        <h1>Holidays at Home</h1>
+        <p class="lede">COVID-19 closed state borders and emptied our cities. Six years on, how far have we
+          come back, where do we go, and why? An <strong>overnight trip</strong> here means a trip at least
+          40&nbsp;km from home that includes a night away.</p>
+      </div>
+    </div>
+
+    <!-- Key numbers: three equal columns -->
+    <div class="pure-g row">
+      <div class="pure-u-1-3 col">
+        <div class="stat">
+          <div class="stat-number">112.5 million</div>
+          <div class="stat-label"><span class="teal">overnight trips</span> in the year to June 2026</div>
         </div>
       </div>
-
-      <!-- 1. Line chart -->
-      <div class="pure-g">
-        <div class="pure-u-1-3">
-          <div class="description description-left">
-            <h2>A collapse, then a rebound</h2>
-            <p>
-              In 2019 Australians took 117 million overnight trips at home.
-              Lockdowns and closed state borders cut this to 82 million in 2021,
-              a drop of 30%.
-            </p>
-            <p>
-              Travel bounced back quickly once borders reopened. By 2024 we were
-              taking 115 million trips, just 2% below 2019.
-            </p>
-          </div>
-        </div>
-        <div class="pure-u-2-3">
-          <p class="chart-title">
-            Overnight trips taken by Australians each year
-          </p>
-          <div id="vis1" class="vis-container"></div>
-          <p class="chart-note">
-            2025 uses Tourism Research Australia's new survey method, so it is
-            not directly comparable with earlier years.
-          </p>
+      <div class="pure-u-1-3 col">
+        <div class="stat">
+          <div class="stat-number">380 million</div>
+          <div class="stat-label"><span class="teal">nights away</span> from home</div>
         </div>
       </div>
-
-      <!-- 2. Heatmap -->
-      <div class="pure-g">
-        <div class="pure-u-2-3">
-          <p class="chart-title">
-            Change in overnight trips to each state, compared with 2019
-          </p>
-          <div id="vis2" class="vis-container"></div>
-          <p class="chart-note">
-            Red means fewer trips than 2019, blue means more. Hover a cell for
-            the trip count.
-          </p>
-        </div>
-        <div class="pure-u-1-3">
-          <div class="description description-right">
-            <h2>Not every state bounced back</h2>
-            <p>
-              Long lockdowns hit the ACT (−46%), Victoria (−40%) and New South
-              Wales (−38%) hardest in 2021. Western Australia fell only 11%:
-              with its border closed, 94% of its trips that year were West
-              Australians holidaying in their own state.
-            </p>
-            <p>
-              By 2024 only Queensland had more trips than before COVID. The
-              Northern Territory was still 17% down.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3. Two maps -->
-      <div class="pure-g">
-        <div class="pure-u-1-1">
-          <h2>Where Australians go</h2>
-          <p>
-            New South Wales receives the most trips simply because it has the
-            most people. Dividing trips by population shows which places draw
-            visitors beyond their size: the ACT (6.3 trips per resident),
-            Tasmania (5.5) and the Northern Territory (5.3). Spending tells a
-            different story: New South Wales ($31.5 billion) and Queensland
-            ($29.0 billion) take the largest share of tourist dollars.
-          </p>
-        </div>
-      </div>
-      <div class="pure-g">
-        <div class="pure-u-1-2">
-          <div class="description-left">
-            <p class="chart-title">
-              Overnight trips received per resident, 2024
-            </p>
-            <div id="vis3" class="vis-container"></div>
-            <p class="chart-note">
-              The ACT is too small to label; hover to see its value.
-            </p>
-          </div>
-        </div>
-        <div class="pure-u-1-2">
-          <div class="description-right">
-            <p class="chart-title">Overnight visitor spend by destination</p>
-            <div id="vis4" class="vis-container"></div>
-            <p class="chart-note">
-              Circle area shows spend. Choose a year to compare.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4. Slope chart -->
-      <div class="pure-g">
-        <div class="pure-u-1-3">
-          <div class="description description-left">
-            <h2>Why we travel</h2>
-            <p>
-              Holidays are the one reason for travel that grew past its
-              pre-COVID level, up 6% to 49 million trips.
-            </p>
-            <p>
-              Trips to visit friends and relatives and business trips are both
-              still about 7% lower than in 2019.
-            </p>
-          </div>
-        </div>
-        <div class="pure-u-2-3">
-          <p class="chart-title">
-            Overnight trips by purpose (millions), 2019 and 2024
-          </p>
-          <div id="vis5" class="vis-container"></div>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <div class="pure-g">
-        <div class="pure-u-1-1 small-font">
-          <p>
-            Data: Tourism Research Australia,
-            <a
-              href="https://www.tra.gov.au/en/tourism-statistics/national-visitor-survey-results"
-              target="_blank"
-              >National Visitor Survey</a
-            >
-            (2019–2024) and
-            <a
-              href="https://www.tra.gov.au/en/tourism-statistics/domestic-tourism-statistics-results"
-              target="_blank"
-              >Domestic Tourism Statistics</a
-            >
-            (2025). Population: Australian Bureau of Statistics,
-            <a
-              href="https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/latest-release"
-              target="_blank"
-              >National, state and territory population, March 2026</a
-            >. State boundaries: ABS, via
-            <a
-              href="https://github.com/rowanhogan/australian-states"
-              target="_blank"
-              >rowanhogan/australian-states</a
-            >, simplified with mapshaper.
-          </p>
-          <p>
-            Created by Jasper Moeller 33897514, October 2026. Generative AI
-            (Claude) was used to help build this page.
-          </p>
+      <div class="pure-u-1-3 col">
+        <div class="stat stat-ochre">
+          <div class="stat-number">$108 billion</div>
+          <div class="stat-label"><span class="ochre">spent</span> on those trips</div>
         </div>
       </div>
     </div>
-    <!-- end page -->
 
-    <script type="text/javascript">
-      vegaEmbed("#vis1", "js/line_national_trips.vg.json", { actions: false });
-      vegaEmbed("#vis2", "js/heatmap_state_recovery.vg.json", {
-        actions: false,
-      });
-      vegaEmbed("#vis3", "js/map_trips_per_resident.vg.json", {
-        actions: false,
-      });
-      vegaEmbed("#vis4", "js/map_spend_symbols.vg.json", { actions: false });
-      vegaEmbed("#vis5", "js/slope_purpose.vg.json", { actions: false });
-    </script>
-  </body>
+    <!-- ===================== 1. The big picture ===================== -->
+    <div class="section-head">
+      <p class="section-number">01 · The big picture</p>
+      <h2>A collapse, then a comeback</h2>
+    </div>
+
+    <div class="pure-g row">
+      <div class="pure-u-1-3 col text">
+        <p>In 2019 Australians took <span class="teal">117 million</span> overnight trips at home.</p>
+        <p>Lockdowns and closed state borders cut this to <span class="brick">72.5 million</span> in 2020,
+          a fall of 38%. In 2021 trips were still 30% down.</p>
+        <p>Once borders reopened, travel bounced back fast. By 2024 we took <span class="teal">115 million</span>
+          trips, just 2% short of 2019.</p>
+        <p class="takeaway">Trip numbers are almost back to normal.</p>
+      </div>
+      <div class="pure-u-2-3 col">
+        <p class="chart-title">Overnight trips fell by 38% in 2020, then almost fully recovered</p>
+        <p class="chart-subtitle">Overnight trips taken by Australians each year, in millions</p>
+        <div id="vis1" class="vis-container"></div>
+        <p class="note">The 2025 figure comes from a new survey method, so it is shown with an open circle and
+          is not directly comparable with earlier years.</p>
+      </div>
+    </div>
+
+    <div class="pure-g row">
+      <div class="pure-u-2-3 col">
+        <p class="chart-title">We take about as many trips as in 2019, but spend far more on each one</p>
+        <p class="chart-subtitle">Each dot is one year: <span class="teal">trips</span> across,
+          <span class="ochre">money spent</span> up. The line joins the years in order.</p>
+        <div id="vis2" class="vis-container"></div>
+        <p class="note">Dollar figures are not adjusted for inflation.</p>
+      </div>
+      <div class="pure-u-1-3 col text">
+        <p>Follow the line from <strong>2019</strong>. It drops to the bottom left in 2020, when we
+          travelled less and spent less.</p>
+        <p>It then climbs far higher than it started. In 2024 we spent <span class="ochre">$110 billion</span>,
+          37% more than in 2019, on slightly fewer trips.</p>
+        <p>The average trip now costs <span class="ochre">$959</span>, up from $687. Rising prices explain
+          part of this.</p>
+      </div>
+    </div>
+
+    <!-- ===================== 2. Recovery by place ===================== -->
+    <div class="section-head">
+      <p class="section-number">02 · Recovery</p>
+      <h2>The big cities are still catching up</h2>
+    </div>
+
+    <div class="pure-g row">
+      <div class="pure-u-1-3 col text">
+        <p>Long lockdowns hit the ACT, Victoria and New South Wales hardest. In 2021 they received about
+          <span class="brick">40% fewer</span> trips than in 2019.</p>
+        <p>Western Australia fell by only 11%. With its border shut, West Australians holidayed at home.</p>
+        <p>By 2024 only <span class="teal">Queensland</span> was ahead of 2019. The Northern Territory was
+          still <span class="brick">17% down</span>.</p>
+      </div>
+      <div class="pure-u-2-3 col">
+        <p class="chart-title">In 2021, trips to the ACT, Victoria and New South Wales fell by around 40%</p>
+        <p class="chart-subtitle">Change in overnight trips to each state compared with 2019:
+          <span class="brick">fewer trips</span> or <span class="teal">more trips</span></p>
+        <div id="vis3" class="vis-container"></div>
+        <p class="note">State figures for 2020 are not part of the tables used here.</p>
+      </div>
+    </div>
+
+    <div class="pure-g row">
+      <div class="pure-u-2-3 col">
+        <p class="chart-title">Four capital cities are still about 10% down, while most regions are back</p>
+        <p class="chart-subtitle">Change in overnight trips from 2019 to 2024. Capital cities and the
+          Gold Coast are in CAPITALS.</p>
+        <div id="vis4" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3 col text">
+        <p><strong>Sydney</strong>, <strong>Melbourne</strong>, <strong>Hobart</strong> and
+          <strong>Darwin</strong> all still receive about <span class="brick">10% fewer</span> trips
+          than before COVID.</p>
+        <p>Regional Tasmania, Victoria and Queensland now receive <span class="teal">more</span> visitors
+          than in 2019.</p>
+        <p>Regional Northern Territory is the exception: trips there are down by
+          <span class="brick">22%</span>.</p>
+        <p class="takeaway">The regions recovered faster than the cities.</p>
+      </div>
+    </div>
+
+    <!-- ===================== 3. Destinations ===================== -->
+    <div class="section-head">
+      <p class="section-number">03 · Destinations</p>
+      <h2>Where Australians go</h2>
+    </div>
+
+    <div class="pure-g row">
+      <div class="pure-u-1-3 col text">
+        <p>Big states receive the most trips simply because more people live there. To compare fairly,
+          the map divides trips by each state's population.</p>
+        <p><span class="teal">Tasmania</span> attracts the most visitors for its size: 5.1 trips for every
+          person who lives there.</p>
+        <p>Western Australia, which is large and far from the east coast, receives the fewest:
+          3.2 per resident.</p>
+      </div>
+      <div class="pure-u-2-3 col">
+        <p class="chart-title">For its size, Tasmania is the most visited state</p>
+        <p class="chart-subtitle">Overnight trips received per resident, year to June 2026.
+          <span class="teal">Darker</span> means more trips per resident.</p>
+        <div id="vis5" class="vis-container"></div>
+      </div>
+    </div>
+
+    <div class="pure-g row">
+      <div class="pure-u-2-3 col">
+        <p class="chart-title">Regions outside the capital cities earn 54% of tourist spending</p>
+        <p class="chart-subtitle"><span class="ochre">Money spent</span> on overnight trips in Australia's 50 most-visited
+          tourism regions, 2024. Circle area shows spending.</p>
+        <div id="vis6" class="vis-container"></div>
+        <p class="note">The 26 least-visited regions are not shown because they are not in the published top 50.</p>
+      </div>
+      <div class="pure-u-1-3 col text">
+        <p>Zooming in from states to tourism regions shows where the money goes.</p>
+        <p><span class="ochre">Melbourne</span> ($12.4 billion) and <span class="ochre">Sydney</span>
+          ($12.2 billion) earn the most of any region.</p>
+        <p>But together, the regions outside the capital cities earn <span class="ochre">54%</span> of the
+          spending, led by the Gold Coast ($5.8 billion) and the North Coast of NSW ($4.9 billion).</p>
+      </div>
+    </div>
+
+    <div class="pure-g row">
+      <div class="pure-u-1-3 col text">
+        <p>Tourism Research Australia splits the country into tourism regions, such as the Hunter or the
+          Gold Coast. The chart ranks the ten where visitors spent the most nights in 2024.</p>
+        <p>When the cities locked down in 2021, the <span class="teal">North Coast of NSW</span> briefly
+          overtook Sydney as the top region.</p>
+        <p><span class="teal">Adelaide</span> has climbed from 13th to 9th.</p>
+        <p class="note">Hover over a dot to highlight a region.</p>
+      </div>
+      <div class="pure-u-2-3 col">
+        <p class="chart-title">In 2021, the North Coast of NSW out-ranked Sydney</p>
+        <p class="chart-subtitle">Rank of the ten most-visited tourism regions, by nights spent there
+          (1 = most nights)</p>
+        <div id="vis7" class="vis-container"></div>
+      </div>
+    </div>
+
+    <!-- ===================== 4. Crossing borders ===================== -->
+    <div class="section-head">
+      <p class="section-number">04 · Crossing borders</p>
+      <h2>Who travels where</h2>
+    </div>
+
+    <div class="pure-g row">
+      <div class="pure-u-2-3 col">
+        <p class="chart-title">The busiest route links Queensland and New South Wales</p>
+        <p class="chart-subtitle">Overnight trips from one state or territory to another, 2024.
+          Choose a state to see only the trips that start there.</p>
+        <div id="vis8" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3 col text">
+        <p>About one overnight trip in four crosses a state border.</p>
+        <p>The busiest route runs up and down the east coast: <span class="teal">4.6 million</span> trips
+          from Queensland to New South Wales, and almost as many the other way.</p>
+        <p>Victorians made 4.1 million trips to New South Wales and 2.4 million to Queensland.</p>
+        <p class="note">Smaller flows that the survey could not measure reliably are left out.</p>
+      </div>
+    </div>
+
+    <div class="pure-g row">
+      <div class="pure-u-1-3 col text">
+        <p>Most trips in the big states are made by <strong>locals</strong>. In Western Australia,
+          85% of visitors live in the state.</p>
+        <p>Smaller places depend on <span class="teal">visitors from other states</span>. They make 64% of
+          trips to the Northern Territory and 46% of trips to Tasmania.</p>
+        <p>In the ACT almost every overnight visitor comes from interstate, because few Canberrans
+          travel 40&nbsp;km or more within the territory.</p>
+      </div>
+      <div class="pure-u-2-3 col">
+        <p class="chart-title">The Northern Territory and Tasmania rely on interstate visitors</p>
+        <p class="chart-subtitle">Share of overnight trips to each state made by
+          <span class="grey-key">people from the same state</span> and by
+          <span class="teal">visitors from other states</span>, 2024</p>
+        <div id="vis9" class="vis-container"></div>
+      </div>
+    </div>
+
+    <!-- ===================== 5. Purpose and spending ===================== -->
+    <div class="section-head">
+      <p class="section-number">05 · Purpose and spending</p>
+      <h2>Why we travel, and where the money goes</h2>
+    </div>
+
+    <div class="pure-g row">
+      <div class="pure-u-2-3 col">
+        <p class="chart-title">Holidays are the only reason for travel that has grown since 2019</p>
+        <p class="chart-subtitle">Overnight trips by reason for the trip, in millions, 2019 and 2024</p>
+        <div id="vis10" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3 col text">
+        <p>Compared with 2019, Australians took <span class="holiday">6% more holidays</span> in 2024.</p>
+        <p>Trips to <span class="vfr">visit friends and relatives</span> and
+          <span class="business">business trips</span> are both still about 7% lower.</p>
+      </div>
+    </div>
+
+    <div class="pure-g row">
+      <div class="pure-u-1-3 col text">
+        <p>The newest survey shows that business travel is still shrinking.</p>
+        <p><span class="business">Business trips</span> halved in just over a year, from 4.1 million in
+          early 2025 to 2.0 million a quarter in mid-2026.</p>
+        <p><span class="holiday">Holiday trips</span> were highest over the 2025–26 summer.</p>
+      </div>
+      <div class="pure-u-2-3 col">
+        <p class="chart-title">Business trips halved between early 2025 and mid-2026</p>
+        <p class="chart-subtitle">Overnight trips each quarter by reason: <span class="holiday">holiday</span>,
+          <span class="vfr">visiting friends and relatives</span>, <span class="grey-key">other</span> and
+          <span class="business">business</span>. Band thickness shows the number of trips.</p>
+        <div id="vis11" class="vis-container"></div>
+        <p class="note">Hover over a band to see the number of trips.</p>
+      </div>
+    </div>
+
+    <div class="pure-g row">
+      <div class="pure-u-2-3 col">
+        <p class="chart-title">People visiting family spend half as much on accommodation</p>
+        <p class="chart-subtitle">How every $100 spent on an overnight trip is split, 2024.
+          One square = $1.</p>
+        <div id="vis12" class="vis-container"></div>
+        <p class="note">Spending items too small for the survey to measure reliably are left out.</p>
+      </div>
+      <div class="pure-u-1-3 col text">
+        <p>On a holiday or a business trip, about <span class="ochre">$32 of every $100</span> goes on
+          accommodation.</p>
+        <p>People visiting friends and relatives spend only <span class="ochre">$17</span>, because many
+          stay for free with their hosts. They spend more on food and on getting there instead.</p>
+        <p>Business travellers spend the most on transport: <strong>$40</strong> of every $100, mostly on
+          flights.</p>
+      </div>
+    </div>
+
+    <!-- ===================== Summary: three equal columns ===================== -->
+    <div class="section-head">
+      <p class="section-number">In short</p>
+      <h2>What has changed</h2>
+    </div>
+
+    <div class="pure-g row">
+      <div class="pure-u-1-3 col text">
+        <p class="takeaway">We travel as much as before COVID, but each trip costs about 40% more.</p>
+      </div>
+      <div class="pure-u-1-3 col text">
+        <p class="takeaway">Most regions have recovered. Sydney, Melbourne, Hobart and Darwin are still about 10% down.</p>
+      </div>
+      <div class="pure-u-1-3 col text">
+        <p class="takeaway">Holidays are growing, while business travel keeps shrinking.</p>
+      </div>
+    </div>
+
+    <!-- ===================== Metadata ===================== -->
+    <div class="footer">
+    <div class="pure-g">
+      <div class="pure-u-1-3 col">
+        <h3>Data sources</h3>
+        <ul>
+          <li>Tourism Research Australia,
+            <a href="https://www.tra.gov.au/en/tourism-statistics/national-visitor-survey-results" target="_blank">National Visitor Survey</a>,
+            years ending December 2019 to 2024.</li>
+          <li>Tourism Research Australia,
+            <a href="https://www.tra.gov.au/en/tourism-statistics/domestic-tourism-statistics-results" target="_blank">Domestic Tourism Statistics</a>,
+            March 2025 to June 2026.</li>
+          <li>2020 national totals: Tourism Research Australia's December 2020 results, as reported by
+            <a href="https://camd.org.au/tra-nvs-2020-calendar-year/" target="_blank">CAMD</a>.</li>
+          <li>Australian Bureau of Statistics,
+            <a href="https://www.abs.gov.au/statistics/people/population/national-state-and-territory-population/latest-release" target="_blank">National, state and territory population</a>,
+            March 2026.</li>
+          <li>Tourism region boundaries: ABS,
+            <a href="https://geo.abs.gov.au/arcgis/rest/services/ASGS2021/TR/FeatureServer" target="_blank">Tourism Regions 2021</a>,
+            simplified with mapshaper.</li>
+          <li>State boundaries: ABS, via
+            <a href="https://github.com/rowanhogan/australian-states" target="_blank">rowanhogan/australian-states</a>,
+            simplified with mapshaper.</li>
+        </ul>
+      </div>
+      <div class="pure-u-1-3 col">
+        <h3>Notes on the data</h3>
+        <ul>
+          <li>Trips and spending cover Australians aged 15 and over (14 and over from 2025).</li>
+          <li>2020 appears only in the national totals (section 1). The state and regional tables used here
+            start in 2019 and resume in 2021.</li>
+          <li>From 2025, Tourism Research Australia uses a new survey method, so 2025 and 2026 figures are
+            not directly comparable with earlier years.</li>
+          <li>Dollar figures are not adjusted for inflation.</li>
+        </ul>
+      </div>
+      <div class="pure-u-1-3 col">
+        <h3>About</h3>
+        <ul>
+          <li>Created by Jasper Moeller, October 2026.</li>
+          <li>FIT3179 Data Visualisation 2, Monash University.</li>
+          <li>Built with Vega-Lite and Pure.css. Maps use an equal-area (Albers) projection.</li>
+          <li>Generative AI (Claude) was used to help prepare the data, write chart code and check the text.</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+  </div> <!-- end page -->
+
+  <script type="text/javascript">
+    var options = { "actions": false };
+    vegaEmbed('#vis1', 'js/line_national_trips.vg.json', options);
+    vegaEmbed('#vis2', 'js/connected_scatter_trips_spend.vg.json', options);
+    vegaEmbed('#vis3', 'js/heatmap_state_recovery.vg.json', options);
+    vegaEmbed('#vis4', 'js/bar_capital_vs_regional.vg.json', options);
+    vegaEmbed('#vis5', 'js/map_trips_per_resident.vg.json', options);
+    vegaEmbed('#vis6', 'js/map_region_spend.vg.json', options);
+    vegaEmbed('#vis7', 'js/bump_top_regions.vg.json', options);
+    vegaEmbed('#vis8', 'js/flow_map_interstate.vg.json', options);
+    vegaEmbed('#vis9', 'js/bar_locals_vs_interstate.vg.json', options);
+    vegaEmbed('#vis10', 'js/slope_purpose.vg.json', options);
+    vegaEmbed('#vis11', 'js/streamgraph_purpose_quarter.vg.json', options);
+    vegaEmbed('#vis12', 'js/waffle_spend_items.vg.json', options);
+  </script>
+</body>
+
 </html>

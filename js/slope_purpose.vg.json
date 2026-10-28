@@ -3,26 +3,20 @@
   "description": "Slope chart: overnight trips by purpose, 2019 vs 2024",
   "width": "container",
   "height": 320,
-  "data": {
-    "url": "data/trips_purpose_year.csv"
-  },
+  "data": {"url": "data/trips_purpose_year.csv"},
   "transform": [
-    {
-      "filter": "datum.year == 2019 || datum.year == 2024"
-    },
-    {
-      "calculate": "datum.trips_000 / 1000",
-      "as": "trips_m"
-    }
+    {"filter": "datum.year == 2019 || datum.year == 2024"},
+    {"calculate": "datum.trips_000 / 1000", "as": "trips_m"},
+    {"calculate": "datum.year == 2019 ? datum.trips_m : null", "as": "v2019"},
+    {"joinaggregate": [{"op": "max", "field": "v2019", "as": "base"}], "groupby": ["purpose"]},
+    {"calculate": "(datum.trips_m - datum.base) / datum.base", "as": "change"}
   ],
   "encoding": {
     "x": {
       "field": "year",
       "type": "ordinal",
       "title": null,
-      "scale": {
-        "padding": 0.8
-      },
+      "scale": {"padding": 0.8},
       "axis": {
         "labelAngle": 0,
         "labelFontSize": 13,
@@ -32,112 +26,46 @@
         "ticks": false
       }
     },
-    "y": {
-      "field": "trips_m",
-      "type": "quantitative",
-      "axis": null
-    },
+    "y": {"field": "trips_m", "type": "quantitative", "axis": null, "scale": {"zero": false}},
     "color": {
       "field": "purpose",
       "type": "nominal",
       "legend": null,
       "scale": {
-        "domain": [
-          "Holiday",
-          "Visiting friends and relatives",
-          "Business",
-          "Other"
-        ],
-        "range": [
-          "#2a8578",
-          "#7b6bb0",
-          "#d9772b",
-          "#9a9a9a"
-        ]
+        "domain": ["Holiday", "Visiting friends and relatives", "Business", "Other"],
+        "range": ["#2f6db5", "#8e5aa8", "#33414e", "#8f887e"]
       }
     },
     "tooltip": [
-      {
-        "field": "purpose",
-        "title": "Purpose"
-      },
-      {
-        "field": "year",
-        "title": "Year"
-      },
-      {
-        "field": "trips_m",
-        "title": "Overnight trips (millions)",
-        "format": ".1f"
-      }
+      {"field": "purpose", "title": "Reason for trip"},
+      {"field": "year", "title": "Year"},
+      {"field": "trips_m", "title": "Overnight trips (millions)", "format": ".1f"}
     ]
   },
   "layer": [
+    {"mark": {"type": "line", "strokeWidth": 3}, "encoding": {"detail": {"field": "purpose"}}},
+    {"mark": {"type": "circle", "size": 80, "opacity": 1}},
     {
-      "mark": {
-        "type": "line",
-        "strokeWidth": 3
-      },
-      "encoding": {
-        "detail": {
-          "field": "purpose"
-        }
-      }
-    },
-    {
-      "mark": {
-        "type": "circle",
-        "size": 80,
-        "opacity": 1
-      }
+      "transform": [{"filter": "datum.year == 2019"}],
+      "mark": {"type": "text", "align": "right", "dx": -10, "fontSize": 13},
+      "encoding": {"text": {"field": "trips_m", "format": ".1f"}}
     },
     {
       "transform": [
+        {"filter": "datum.year == 2024"},
         {
-          "filter": "datum.year == 2019"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "right",
-        "dx": -10,
-        "fontSize": 12
-      },
-      "encoding": {
-        "text": {
-          "field": "trips_m",
-          "format": ".1f"
-        }
-      }
-    },
-    {
-      "transform": [
-        {
-          "filter": "datum.year == 2024"
-        },
-        {
-          "calculate": "format(datum.trips_m, '.1f') + 'm  ' + (datum.purpose == 'Visiting friends and relatives' ? 'Visiting friends & family' : datum.purpose)",
+          "calculate": "format(datum.trips_m, '.1f') + 'm  ' + (datum.purpose == 'Visiting friends and relatives' ? 'Visiting friends & relatives' : datum.purpose) + '  (' + (datum.change >= 0 ? '+' : '') + format(datum.change, '.0%') + ')'",
           "as": "label"
         }
       ],
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "dx": 10,
-        "fontSize": 12,
-        "fontWeight": "bold"
-      },
-      "encoding": {
-        "text": {
-          "field": "label"
-        }
-      }
+      "mark": {"type": "text", "align": "left", "dx": 10, "fontSize": 13, "fontWeight": "bold"},
+      "encoding": {"text": {"field": "label"}}
     }
   ],
   "config": {
-    "view": {
-      "stroke": null
-    },
-    "font": "Source Sans 3"
+    "view": {"stroke": null},
+    "font": "Source Sans 3",
+    "axis": {"labelFontSize": 13, "titleFontSize": 13},
+    "legend": {"labelFontSize": 13, "titleFontSize": 13}
   }
 }

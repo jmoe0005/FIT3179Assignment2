@@ -1,0 +1,180 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Origin-destination flow map: overnight trips from one state or territory to another, 2024. Line width shows the number of trips; arrows point to the destination.",
+  "width": "container",
+  "height": 460,
+  "projection": {"type": "conicEqualArea", "parallels": [-18, -36], "rotate": [-134, 0]},
+  "params": [
+    {
+      "name": "origin_select",
+      "value": "All states",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All states",
+          "New South Wales",
+          "Victoria",
+          "Queensland",
+          "South Australia",
+          "Western Australia",
+          "Tasmania",
+          "Northern Territory",
+          "Australian Capital Territory"
+        ],
+        "name": "Show trips starting in: "
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {"url": "js/aus_states.topojson", "format": {"type": "topojson", "feature": "states"}},
+      "mark": {"type": "geoshape", "fill": "#ece8e0", "stroke": "#ffffff", "strokeWidth": 1.2}
+    },
+    {
+      "data": {
+        "url": "data/flow_lines.csv",
+        "format": {
+          "type": "csv",
+          "parse": {"trips_000": "number", "point": "number", "lon": "number", "lat": "number"}
+        }
+      },
+      "transform": [
+        {"calculate": "datum.trips_000 / 1000", "as": "trips_m"},
+        {
+          "calculate": "origin_select == 'All states' || datum.origin == origin_select",
+          "as": "shown"
+        }
+      ],
+      "mark": {"type": "trail", "color": "#1f7a6d"},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "detail": {"field": "flow", "type": "nominal"},
+        "order": {"field": "point", "type": "quantitative"},
+        "size": {
+          "field": "trips_m",
+          "type": "quantitative",
+          "title": "Trips per year (millions)",
+          "scale": {"domain": [0, 4.7], "range": [0.5, 11]},
+          "legend": null
+        },
+        "opacity": {"condition": {"test": "datum.shown", "value": 0.8}, "value": 0.06},
+        "tooltip": [
+          {"field": "origin", "title": "From"},
+          {"field": "destination", "title": "To"},
+          {"field": "trips_m", "title": "Overnight trips (millions)", "format": ".2f"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/flow_arrows.csv",
+        "format": {
+          "type": "csv",
+          "parse": {"trips_000": "number", "lon": "number", "lat": "number", "angle": "number"}
+        }
+      },
+      "transform": [
+        {"calculate": "datum.trips_000 / 1000", "as": "trips_m"},
+        {
+          "calculate": "origin_select == 'All states' || datum.origin == origin_select",
+          "as": "shown"
+        }
+      ],
+      "mark": {"type": "point", "shape": "triangle-up", "filled": true, "color": "#1f7a6d"},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "angle": {"field": "angle", "type": "quantitative", "scale": null},
+        "size": {
+          "field": "trips_m",
+          "type": "quantitative",
+          "scale": {"domain": [0, 4.7], "range": [25, 330]},
+          "legend": null
+        },
+        "opacity": {"condition": {"test": "datum.shown", "value": 0.9}, "value": 0.06},
+        "tooltip": [
+          {"field": "origin", "title": "From"},
+          {"field": "destination", "title": "To"},
+          {"field": "trips_m", "title": "Overnight trips (millions)", "format": ".2f"}
+        ]
+      }
+    },
+    {
+      "data": {"url": "data/state_population.csv"},
+      "mark": {"type": "circle", "color": "#33414e", "size": 45, "opacity": 1},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"}
+      }
+    },
+    {
+      "data": {"url": "data/state_population.csv"},
+      "mark": {
+        "type": "text",
+        "fontSize": 14,
+        "fontWeight": "bold",
+        "color": "#ffffff",
+        "dy": -12,
+        "stroke": "#ffffff",
+        "strokeWidth": 4,
+        "strokeJoin": "round"
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "abbr"}
+      }
+    },
+    {
+      "data": {"url": "data/state_population.csv"},
+      "mark": {"type": "text", "fontSize": 14, "fontWeight": "bold", "color": "#33414e", "dy": -12},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "abbr"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"lon": 137.2, "lat": -11.6, "label": "Busiest route: Queensland ↔ New South Wales,"},
+          {"lon": 137.2, "lat": -12.9, "label": "4.6 million trips each way"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 13,
+        "color": "#1f7a6d",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"lon": 113.5, "lat": -39.0, "label": "Line width shows the number of trips."},
+          {"lon": 113.5, "lat": -40.2, "label": "Arrows point to the destination."}
+        ]
+      },
+      "mark": {"type": "text", "align": "left", "fontSize": 13, "color": "#55606a"},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3",
+    "view": {"stroke": null},
+    "legend": {"labelFontSize": 13, "titleFontSize": 13, "titleColor": "#33414e", "labelColor": "#55606a"},
+    "axis": {"labelFontSize": 13, "titleFontSize": 13}
+  },
+  "resolve": {"scale": {"size": "independent"}, "legend": {"size": "independent"}}
+}

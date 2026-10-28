@@ -1,166 +1,132 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Choropleth: overnight trips received per resident, by destination state, 2024",
+  "description": "Choropleth map: overnight trips received per resident, by destination state, year ending June 2026",
   "width": "container",
-  "height": 380,
-  "projection": {
-    "type": "conicEqualArea",
-    "parallels": [
-      -18,
-      -36
-    ],
-    "rotate": [
-      -134,
-      0
-    ]
-  },
-  "data": {
-    "url": "data/trips_state_year.csv"
-  },
+  "height": 400,
+  "projection": {"type": "conicEqualArea", "parallels": [-18, -36], "rotate": [-134, 0]},
+  "data": {"url": "data/state_latest.csv"},
   "transform": [
-    {
-      "filter": "datum.year == 2024"
-    },
     {
       "lookup": "state",
       "from": {
-        "data": {
-          "url": "data/state_population.csv"
-        },
+        "data": {"url": "data/state_population.csv"},
         "key": "state",
-        "fields": [
-          "abbr",
-          "population_000",
-          "lat",
-          "lon"
-        ]
+        "fields": ["abbr", "population_000", "lat", "lon"]
       }
     },
     {
       "lookup": "state",
       "from": {
-        "data": {
-          "url": "js/aus_states.topojson",
-          "format": {
-            "type": "topojson",
-            "feature": "states"
-          }
-        },
+        "data": {"url": "js/aus_states.topojson", "format": {"type": "topojson", "feature": "states"}},
         "key": "properties.name"
       },
       "as": "geo"
     },
-    {
-      "calculate": "datum.trips_000 / datum.population_000",
-      "as": "trips_per_resident"
-    }
+    {"calculate": "datum.trips_000 / datum.population_000", "as": "trips_per_resident"},
+    {"calculate": "datum.trips_000 / 1000", "as": "trips_m"},
+    {"calculate": "datum.population_000 / 1000", "as": "population_m"}
   ],
   "layer": [
     {
-      "mark": {
-        "type": "geoshape",
-        "stroke": "#ffffff",
-        "strokeWidth": 1
-      },
+      "mark": {"type": "geoshape", "stroke": "#ffffff", "strokeWidth": 1.2},
       "encoding": {
-        "shape": {
-          "field": "geo",
-          "type": "geojson"
-        },
+        "shape": {"field": "geo", "type": "geojson"},
         "color": {
           "field": "trips_per_resident",
           "type": "quantitative",
           "title": "Overnight trips per resident",
           "scale": {
             "type": "threshold",
-            "domain": [
-              3.5,
-              4,
-              4.5,
-              5
-            ],
-            "range": [
-              "#e3f1ef",
-              "#a9d6cf",
-              "#5fb3a8",
-              "#2a8578",
-              "#0f5a50"
-            ]
+            "domain": [3.5, 4, 4.5, 5],
+            "range": ["#e0f0ec", "#a8d5cb", "#62ae9f", "#2b7f71", "#0e4f45"]
           },
           "legend": {
-            "orient": "bottom",
+            "orient": "bottom-left",
             "direction": "horizontal",
-            "format": ".1f"
+            "format": ".1f",
+            "symbolType": "square",
+            "symbolSize": 220,
+            "labelOverlap": false
           }
         },
         "tooltip": [
-          {
-            "field": "state",
-            "title": "Destination"
-          },
-          {
-            "field": "year",
-            "title": "Year ending December"
-          },
-          {
-            "field": "trips_000",
-            "title": "Overnight trips ('000)",
-            "format": ",.0f"
-          },
-          {
-            "field": "population_000",
-            "title": "Residents ('000)",
-            "format": ",.0f"
-          },
-          {
-            "field": "trips_per_resident",
-            "title": "Trips per resident",
-            "format": ".1f"
-          }
+          {"field": "state", "title": "Destination"},
+          {"field": "trips_m", "title": "Overnight trips received (millions)", "format": ".1f"},
+          {"field": "population_m", "title": "People living there (millions)", "format": ".2f"},
+          {"field": "trips_per_resident", "title": "Trips per resident", "format": ".1f"}
         ]
       }
     },
     {
+      "transform": [{"filter": "datum.abbr != 'ACT'"}],
+      "mark": {"type": "text", "fontSize": 14, "fontWeight": "bold"},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "abbr"},
+        "color": {
+          "condition": {"test": "datum.trips_per_resident >= 4.5", "value": "#ffffff"},
+          "value": "#33414e"
+        }
+      }
+    },
+    {
+      "transform": [{"filter": "datum.abbr != 'ACT'"}],
+      "mark": {"type": "text", "fontSize": 13, "dy": 15},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "trips_per_resident", "type": "quantitative", "format": ".1f"},
+        "color": {
+          "condition": {"test": "datum.trips_per_resident >= 4.5", "value": "#ffffff"},
+          "value": "#33414e"
+        }
+      }
+    },
+    {
+      "data": {"values": [{"lon": 149.1, "lat": -35.3, "lon2": 153.6, "lat2": -36.6}]},
+      "mark": {"type": "rule", "color": "#55606a", "strokeWidth": 1},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "longitude2": {"field": "lon2"},
+        "latitude2": {"field": "lat2"}
+      }
+    },
+    {
+      "data": {"values": [{"lon": 153.8, "lat": -36.6, "label": "ACT 4.5"}]},
       "mark": {
         "type": "text",
-        "fontSize": 12,
-        "fontWeight": 700
+        "align": "left",
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#33414e"
       },
       "encoding": {
-        "longitude": {
-          "field": "lon",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "lat",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "abbr"
-        },
-        "color": {
-          "condition": {
-            "test": "datum.trips_per_resident >= 4.5",
-            "value": "#ffffff"
-          },
-          "value": "#1d2b2a"
-        }
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"lon": 150.2, "lat": -41.4, "label": "Tasmania draws the most visitors"},
+          {"lon": 150.2, "lat": -42.6, "label": "for its size: 5.1 trips per resident"}
+        ]
       },
-      "transform": [
-        {
-          "filter": "datum.abbr != 'ACT'"
-        }
-      ]
+      "mark": {"type": "text", "align": "left", "fontSize": 13, "color": "#33414e"},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
     }
   ],
   "config": {
-    "view": {
-      "stroke": null
-    },
     "font": "Source Sans 3",
-    "legend": {
-      "titleFontSize": 12,
-      "labelFontSize": 11
-    }
+    "view": {"stroke": null},
+    "legend": {"labelFontSize": 13, "titleFontSize": 13, "titleColor": "#33414e", "labelColor": "#55606a"},
+    "axis": {"labelFontSize": 13, "titleFontSize": 13}
   }
 }

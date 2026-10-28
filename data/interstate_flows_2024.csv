@@ -1,0 +1,35 @@
+origin,origin_abbr,destination,destination_abbr,trips_000
+Victoria,VIC,New South Wales,NSW,4111
+Queensland,QLD,New South Wales,NSW,4628
+South Australia,SA,New South Wales,NSW,497
+Western Australia,WA,New South Wales,NSW,395
+Tasmania,TAS,New South Wales,NSW,183
+Australian Capital Territory,ACT,New South Wales,NSW,1833
+New South Wales,NSW,Victoria,VIC,3731
+Queensland,QLD,Victoria,VIC,1620
+South Australia,SA,Victoria,VIC,1188
+Western Australia,WA,Victoria,VIC,621
+Tasmania,TAS,Victoria,VIC,444
+Australian Capital Territory,ACT,Victoria,VIC,336
+New South Wales,NSW,Queensland,QLD,4588
+Victoria,VIC,Queensland,QLD,2389
+South Australia,SA,Queensland,QLD,375
+Western Australia,WA,Queensland,QLD,318
+Tasmania,TAS,Queensland,QLD,163
+Northern Territory,NT,Queensland,QLD,124
+Australian Capital Territory,ACT,Queensland,QLD,175
+New South Wales,NSW,South Australia,SA,798
+Victoria,VIC,South Australia,SA,1528
+Queensland,QLD,South Australia,SA,382
+Western Australia,WA,South Australia,SA,210
+Northern Territory,NT,South Australia,SA,94
+New South Wales,NSW,Western Australia,WA,519
+Victoria,VIC,Western Australia,WA,531
+Queensland,QLD,Western Australia,WA,323
+New South Wales,NSW,Tasmania,TAS,416
+Victoria,VIC,Tasmania,TAS,669
+Queensland,QLD,Tasmania,TAS,229
+Queensland,QLD,Northern Territory,NT,284
+New South Wales,NSW,Australian Capital Territory,ACT,1876
+Victoria,VIC,Australian Capital Territory,ACT,612
+Queensland,QLD,Australian Capital Territory,ACT,374

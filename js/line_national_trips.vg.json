@@ -1,209 +1,112 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Line chart: national overnight trips per year",
+  "description": "Line chart: overnight trips taken by Australians each year, 2019 to 2025",
   "width": "container",
   "height": 300,
-  "data": {
-    "url": "data/national_year.csv"
-  },
+  "data": {"url": "data/national_year.csv"},
   "transform": [
+    {"calculate": "datum.trips_000 / 1000", "as": "trips_m"},
     {
-      "calculate": "datum.trips_000 / 1000",
-      "as": "trips_m"
+      "calculate": "datum.source == 'DoTS' ? 'Domestic Tourism Statistics (new method)' : 'National Visitor Survey'",
+      "as": "survey"
     }
   ],
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "quantitative",
+      "title": null,
+      "scale": {"domain": [2019, 2025]},
+      "axis": {"format": "d", "values": [2019, 2020, 2021, 2022, 2023, 2024, 2025], "grid": false}
+    },
+    "y": {
+      "field": "trips_m",
+      "type": "quantitative",
+      "title": "Overnight trips (millions)",
+      "scale": {"domain": [0, 130]},
+      "axis": {"values": [0, 25, 50, 75, 100, 125]}
+    }
+  },
   "layer": [
     {
-      "mark": {
-        "type": "line",
-        "color": "#2a8578",
-        "strokeWidth": 3,
-        "point": {
-          "size": 60,
-          "filled": true,
-          "color": "#2a8578"
-        }
-      },
+      "data": {"values": [{"from": 2019.5, "to": 2021.5, "bottom": 0, "top": 130}]},
+      "mark": {"type": "rect", "color": "#f6e4de"},
       "encoding": {
-        "x": {
-          "field": "year",
-          "type": "quantitative",
-          "title": "Year ending December",
-          "scale": {
-            "domain": [
-              2019,
-              2025
-            ]
-          },
-          "axis": {
-            "format": "d",
-            "tickCount": 7,
-            "grid": false
-          }
-        },
-        "y": {
-          "field": "trips_m",
-          "type": "quantitative",
-          "title": "Overnight trips (millions)",
-          "scale": {
-            "domain": [
-              70,
-              125
-            ]
-          }
-        },
+        "x": {"field": "from", "type": "quantitative"},
+        "x2": {"field": "to"},
+        "y": {"field": "bottom", "type": "quantitative"},
+        "y2": {"field": "top"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"year": 2020.5, "trips_m": 24, "label": "Lockdowns and"},
+          {"year": 2020.5, "trips_m": 17, "label": "closed borders"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "baseline": "top",
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#b8472e"
+      },
+      "encoding": {"text": {"field": "label"}}
+    },
+    {
+      "transform": [{"filter": "datum.year <= 2024"}],
+      "mark": {"type": "line", "color": "#1f7a6d", "strokeWidth": 3}
+    },
+    {
+      "transform": [{"filter": "datum.year >= 2024"}],
+      "mark": {"type": "line", "color": "#1f7a6d", "strokeWidth": 2, "strokeDash": [4, 4]}
+    },
+    {
+      "mark": {"type": "point", "size": 70, "strokeWidth": 2, "color": "#1f7a6d", "opacity": 1},
+      "encoding": {
+        "fill": {"condition": {"test": "datum.year == 2025", "value": "#ffffff"}, "value": "#1f7a6d"},
         "tooltip": [
-          {
-            "field": "year",
-            "title": "Year"
-          },
-          {
-            "field": "trips_m",
-            "title": "Overnight trips (millions)",
-            "format": ".1f"
-          },
-          {
-            "field": "source",
-            "title": "Survey"
-          }
+          {"field": "year", "title": "Year"},
+          {"field": "trips_m", "title": "Overnight trips (millions)", "format": ".1f"},
+          {"field": "survey", "title": "Source survey"}
         ]
       }
     },
     {
-      "data": {
-        "values": [
-          {
-            "year": 2019,
-            "trips_m": 117.4,
-            "label": "2019: 117 million trips"
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "fontSize": 12,
-        "color": "#333",
-        "dx": 8,
-        "dy": -12,
-        "align": "left"
-      },
-      "encoding": {
-        "x": {
-          "field": "year",
-          "type": "quantitative"
-        },
-        "y": {
-          "field": "trips_m",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "label"
-        }
-      }
+      "data": {"values": [{"year": 2019, "trips_m": 117.4, "label": "117 million in 2019"}]},
+      "mark": {"type": "text", "fontSize": 13, "color": "#33414e", "dx": 6, "dy": -14, "align": "left"},
+      "encoding": {"text": {"field": "label"}}
     },
     {
-      "data": {
-        "values": [
-          {
-            "year": 2021,
-            "trips_m": 82.1,
-            "label": "2021: 82 million, down 30%"
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "fontSize": 12,
-        "color": "#333",
-        "dx": 8,
-        "dy": 4,
-        "align": "left"
-      },
-      "encoding": {
-        "x": {
-          "field": "year",
-          "type": "quantitative"
-        },
-        "y": {
-          "field": "trips_m",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "label"
-        }
-      }
+      "data": {"values": [{"year": 2020, "trips_m": 72.5, "label": "72.5 million in 2020: down 38%"}]},
+      "mark": {"type": "text", "fontSize": 13, "color": "#33414e", "dx": 10, "dy": 16, "align": "left"},
+      "encoding": {"text": {"field": "label"}}
     },
     {
-      "data": {
-        "values": [
-          {
-            "year": 2020,
-            "trips_m": 99.5,
-            "label": "(no 2020 data)"
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "fontSize": 12,
-        "color": "#555",
-        "fontStyle": "italic",
-        "dx": 8,
-        "dy": 0,
-        "align": "left"
-      },
-      "encoding": {
-        "x": {
-          "field": "year",
-          "type": "quantitative"
-        },
-        "y": {
-          "field": "trips_m",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "label"
-        }
-      }
+      "data": {"values": [{"year": 2024, "trips_m": 115.0, "label": "115 million: almost back"}]},
+      "mark": {"type": "text", "fontSize": 13, "color": "#33414e", "dx": 0, "dy": -16, "align": "right"},
+      "encoding": {"text": {"field": "label"}}
     },
     {
-      "data": {
-        "values": [
-          {
-            "year": 2025,
-            "trips_m": 113.0,
-            "label": "New survey method from 2025"
-          }
-        ]
-      },
-      "mark": {
-        "type": "text",
-        "fontSize": 12,
-        "color": "#333",
-        "fontStyle": "italic",
-        "dx": 0,
-        "dy": 18,
-        "align": "right"
-      },
-      "encoding": {
-        "x": {
-          "field": "year",
-          "type": "quantitative"
-        },
-        "y": {
-          "field": "trips_m",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "label"
-        }
-      }
+      "data": {"values": [{"year": 2025, "trips_m": 113.0, "label": "New survey method"}]},
+      "mark": {"type": "text", "fontSize": 13, "color": "#33414e", "dx": 0, "dy": 20, "align": "right"},
+      "encoding": {"text": {"field": "label"}}
     }
   ],
   "config": {
-    "view": {
-      "stroke": null
+    "font": "Source Sans 3",
+    "view": {"stroke": null},
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "labelColor": "#55606a",
+      "titleColor": "#55606a",
+      "titleFontWeight": "normal",
+      "domainColor": "#b9b2a6",
+      "tickColor": "#b9b2a6",
+      "gridColor": "#ece8e0"
     },
-    "font": "Source Sans 3"
+    "legend": {"labelFontSize": 13, "titleFontSize": 13}
   }
 }

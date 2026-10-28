@@ -1,0 +1,51 @@
+region,label,lon,lat,rank,nights_000,trips_000,spend_m,type
+Sydney,Sydney,150.865,-33.676,1,31665,11338,12187,Capital city
+Melbourne,Melbourne,144.918,-37.678,2,29051,10411,12398,Capital city
+Brisbane,Brisbane,152.591,-27.148,3,25603,8149,8247,Capital city
+North Coast NSW,North Coast NSW,152.75,-30.08,4,20591,6240,4940,Regional
+Destination Perth,Perth,116.566,-32.183,5,15116,4449,5329,Capital city
+Gold Coast,Gold Coast,153.333,-28.059,6,14894,4287,5761,Regional
+South Coast,South Coast,149.874,-36.138,7,14811,4494,3180,Regional
+Sunshine Coast,Sunshine Coast,152.671,-26.275,8,13520,4028,3953,Regional
+Adelaide,Adelaide,138.654,-34.779,9,11585,3531,3989,Capital city
+Hunter,Hunter,151.09,-32.322,10,11470,4465,2899,Regional
+Australia's North West,Australia's North West,124.352,-20.461,11,10646,1474,1780,Regional
+Australia's South West,Australia's South West,117.327,-34.258,12,10439,3264,2271,Regional
+Tropical North Queensland,Tropical North Queensland,143.115,-16.828,13,9922,2162,3284,Regional
+Southern Queensland Country,Southern Queensland Country,150.819,-27.396,14,9599,3137,1679,Regional
+Australia's Golden Outback,Australia's Golden Outback,122.537,-28.368,15,8232,1369,1159,Regional
+Canberra,Canberra,148.98,-35.467,16,7540,3098,2560,Capital city
+High Country,High Country,146.605,-36.663,17,7012,2438,1562,Regional
+Central NSW,Central NSW,148.49,-32.743,18,6860,2772,1836,Regional
+Great Ocean Road,Great Ocean Road,142.931,-38.209,19,6447,2465,1477,Regional
+Hobart and the South,Hobart and the South,146.623,-42.626,20,5710,1578,1988,Capital city
+Peninsula,Peninsula,145.075,-38.321,21,5362,2105,1083,Regional
+Central Coast,Central Coast,151.281,-33.293,22,4728,1797,870,Regional
+New England North West,New England North West,150.689,-30.088,23,4628,1749,931,Regional
+Capital Country,Capital Country,149.33,-34.646,24,4587,2023,894,Regional
+Australia's Coral Coast,Australia's Coral Coast,114.891,-24.935,25,4470,956,845,Regional
+Geelong and the Bellarine,Geelong and the Bellarine,144.17,-37.971,26,4457,1768,1001,Regional
+Outback Queensland,Outback Queensland,143.462,-24.303,27,4280,1107,768,Regional
+Mackay,Mackay,148.313,-21.967,28,4220,1161,623,Regional
+Townsville,Townsville,145.931,-20.042,29,4038,1279,1053,Regional
+Gippsland,Gippsland,146.549,-38.089,30,3867,1638,535,Regional
+Darwin,Darwin,131.131,-12.528,31,3695,689,1294,Capital city
+The Murray,The Murray,142.976,-33.737,32,3284,1246,743,Regional
+Snowy Mountains,Snowy Mountains,148.587,-36.247,33,3258,969,1079,Regional
+Whitsundays,Whitsundays,147.706,-20.672,34,3160,709,1410,Regional
+Riverina,Riverina,145.655,-34.153,35,3050,1261,654,Regional
+Lakes,Lakes,148.167,-37.324,36,2956,973,475,Regional
+Launceston and the North,Launceston and the North,147.368,-41.663,37,2876,987,811,Regional
+Phillip Island,Phillip Island,145.589,-38.516,38,2866,1014,609,Regional
+Capricorn,Capricorn,148.985,-24.087,39,2823,842,703,Regional
+Blue Mountains,Blue Mountains,150.129,-33.721,40,2732,1265,708,Regional
+Flinders Ranges and Outback,Flinders Ranges and Outback,135.67,-29.014,41,2726,662,437,Regional
+Fraser Coast,Fraser Coast,152.523,-25.606,42,2705,730,575,Regional
+Mallee,Mallee,141.855,-34.826,43,2601,873,531,Regional
+Outback NSW,Outback NSW,144.511,-30.898,44,2528,688,451,Regional
+Central Murray,Central Murray,144.878,-36.286,45,2469,924,453,Regional
+Bendigo Loddon,Bendigo Loddon,143.993,-36.635,46,2448,1271,525,Regional
+Bundaberg,Bundaberg,151.406,-25.264,47,2197,706,452,Regional
+North West,North West,145.49,-41.275,48,2083,706,512,Regional
+Ballarat,Ballarat,143.455,-37.422,49,2001,1056,434,Regional
+Limestone Coast,Limestone Coast,140.451,-36.881,50,1995,775,441,Regional

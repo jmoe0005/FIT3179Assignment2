@@ -1,152 +1,79 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Heatmap: overnight trips by destination state and year, as % change from 2019",
+  "description": "Heatmap: change in overnight trips to each state compared with 2019, by year",
   "width": "container",
   "height": 280,
-  "autosize": {
-    "type": "fit-x",
-    "contains": "padding"
-  },
-  "data": {
-    "url": "data/trips_state_year.csv"
-  },
+  "autosize": {"type": "fit-x", "contains": "padding"},
+  "data": {"url": "data/trips_state_year.csv"},
   "transform": [
+    {"calculate": "datum.year == 2019 ? datum.trips_000 : null", "as": "base_candidate"},
     {
-      "calculate": "datum.year == 2019 ? datum.trips_000 : null",
-      "as": "base_candidate"
+      "joinaggregate": [{"op": "max", "field": "base_candidate", "as": "base2019"}],
+      "groupby": ["state"]
     },
-    {
-      "joinaggregate": [
-        {
-          "op": "max",
-          "field": "base_candidate",
-          "as": "base2019"
-        }
-      ],
-      "groupby": [
-        "state"
-      ]
-    },
-    {
-      "calculate": "(datum.trips_000 - datum.base2019) / datum.base2019",
-      "as": "change"
-    },
+    {"calculate": "(datum.trips_000 - datum.base2019) / datum.base2019", "as": "change"},
     {
       "calculate": "datum.state == 'Australian Capital Territory' ? 'ACT' : datum.state",
       "as": "State"
-    }
+    },
+    {"calculate": "datum.trips_000/1000", "as": "trips_m"}
   ],
   "encoding": {
     "x": {
       "field": "year",
       "type": "ordinal",
       "title": "Year ending December",
-      "axis": {
-        "labelAngle": 0,
-        "domain": false,
-        "ticks": false
-      }
+      "axis": {"labelAngle": 0, "domain": false, "ticks": false}
     },
     "y": {
       "field": "State",
       "type": "nominal",
       "title": null,
-      "sort": {
-        "field": "change",
-        "op": "mean",
-        "order": "descending"
-      },
-      "axis": {
-        "domain": false,
-        "ticks": false,
-        "labelLimit": 260,
-        "minExtent": 140,
-        "labelPadding": 8
-      }
+      "sort": {"field": "change", "op": "min", "order": "ascending"},
+      "axis": {"domain": false, "ticks": false, "labelLimit": 260, "minExtent": 140, "labelPadding": 8}
     }
   },
   "layer": [
     {
-      "mark": {
-        "type": "rect",
-        "stroke": "#ffffff",
-        "strokeWidth": 2
-      },
+      "mark": {"type": "rect", "stroke": "#ffffff", "strokeWidth": 2},
       "encoding": {
         "color": {
           "field": "change",
           "type": "quantitative",
-          "title": "vs 2019",
-          "scale": {
-            "scheme": "redblue",
-            "domain": [
-              -0.5,
-              0.5
-            ]
-          },
+          "title": "Change in trips since 2019",
+          "scale": {"domain": [-0.5, 0, 0.5], "range": ["#b8472e", "#f3efe7", "#1f7a6d"]},
           "legend": {
             "format": "+.0%",
-            "orient": "right",
-            "gradientLength": 160
+            "orient": "top",
+            "direction": "horizontal",
+            "gradientLength": 220,
+            "values": [-0.4, -0.2, 0, 0.2, 0.4]
           }
         },
         "tooltip": [
-          {
-            "field": "state",
-            "title": "Destination"
-          },
-          {
-            "field": "year",
-            "title": "Year"
-          },
-          {
-            "field": "trips_000",
-            "title": "Overnight trips ('000)",
-            "format": ",.0f"
-          },
-          {
-            "field": "change",
-            "title": "Change vs 2019",
-            "format": "+.0%"
-          }
+          {"field": "state", "title": "Destination"},
+          {"field": "year", "title": "Year"},
+          {"field": "trips_m", "title": "Overnight trips (millions)", "format": ".1f"},
+          {"field": "change", "title": "Change since 2019", "format": "+.0%"}
         ]
       }
     },
     {
-      "transform": [
-        {
-          "filter": "datum.year != 2019"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "fontSize": 11
-      },
+      "transform": [{"filter": "datum.year != 2019"}],
+      "mark": {"type": "text", "fontSize": 12},
       "encoding": {
-        "text": {
-          "field": "change",
-          "type": "quantitative",
-          "format": "+.0%"
-        },
+        "text": {"field": "change", "type": "quantitative", "format": "+.0%"},
         "color": {
-          "condition": {
-            "test": "abs(datum.change) > 0.3",
-            "value": "#ffffff"
-          },
+          "condition": {"test": "abs(datum.change) > 0.3", "value": "#ffffff"},
           "value": "#222222"
         }
       }
     }
   ],
   "config": {
-    "view": {
-      "stroke": null
-    },
+    "view": {"stroke": null},
     "font": "Source Sans 3",
-    "axis": {
-      "labelFontSize": 12,
-      "titleFontSize": 12,
-      "titleColor": "#555"
-    }
+    "axis": {"labelFontSize": 13, "titleFontSize": 13, "titleColor": "#555"},
+    "legend": {"labelFontSize": 13, "titleFontSize": 13}
   }
 }

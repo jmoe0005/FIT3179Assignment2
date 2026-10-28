@@ -1,0 +1,190 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Proportional symbol map: money spent on overnight trips in Australia's 50 most-visited tourism regions, 2024. Circle area shows spending.",
+  "width": "container",
+  "height": 420,
+  "projection": {"type": "conicEqualArea", "parallels": [-18, -36], "rotate": [-134, 0]},
+  "layer": [
+    {
+      "data": {
+        "url": "js/aus_tourism_regions.topojson",
+        "format": {"type": "topojson", "feature": "regions"}
+      },
+      "mark": {"type": "geoshape", "fill": "#ece8e0", "stroke": "#ffffff", "strokeWidth": 0.6}
+    },
+    {
+      "data": {"url": "js/aus_states.topojson", "format": {"type": "topojson", "feature": "states"}},
+      "mark": {"type": "geoshape", "fill": null, "stroke": "#b9b2a6", "strokeWidth": 1.2}
+    },
+    {
+      "data": {
+        "url": "data/regions_map_2024.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "lon": "number",
+            "lat": "number",
+            "spend_m": "number",
+            "nights_000": "number",
+            "rank": "number"
+          }
+        }
+      },
+      "transform": [
+        {"calculate": "datum.spend_m / 1000", "as": "spend_bn"},
+        {"calculate": "datum.nights_000 / 1000", "as": "nights_m"}
+      ],
+      "mark": {
+        "type": "circle",
+        "color": "#c8741f",
+        "opacity": 0.75,
+        "stroke": "#ffffff",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "size": {
+          "field": "spend_bn",
+          "type": "quantitative",
+          "title": "Spending ($ billion)",
+          "scale": {"domain": [0, 13], "range": [0, 2200]},
+          "legend": {
+            "orient": "bottom-left",
+            "direction": "horizontal",
+            "values": [1, 5, 12],
+            "labelExpr": "'$' + datum.label + 'bn'",
+            "symbolFillColor": "#c8741f",
+            "symbolStrokeColor": "#ffffff"
+          }
+        },
+        "order": {"field": "spend_m", "sort": "descending"},
+        "tooltip": [
+          {"field": "label", "title": "Tourism region"},
+          {"field": "type", "title": "Type"},
+          {
+            "field": "spend_bn",
+            "title": "Spending on overnight trips ($ billion)",
+            "format": ".1f"
+          },
+          {"field": "nights_m", "title": "Visitor nights (millions)", "format": ".1f"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"lon": 144.9, "lat": -37.8, "label": "Melbourne $12.4bn", "align": "right"},
+          {"lon": 151.2, "lat": -33.6, "label": "Sydney $12.2bn", "align": "left"},
+          {"lon": 152.9, "lat": -27.4, "label": "Brisbane $8.2bn", "align": "left"},
+          {"lon": 115.9, "lat": -31.9, "label": "Perth $5.3bn", "align": "right"}
+        ]
+      },
+      "transform": [{"filter": "datum.align == 'left'"}],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 16,
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#ffffff",
+        "stroke": "#ffffff",
+        "strokeWidth": 4,
+        "strokeJoin": "round"
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"lon": 144.9, "lat": -37.8, "label": "Melbourne $12.4bn", "align": "right"},
+          {"lon": 151.2, "lat": -33.6, "label": "Sydney $12.2bn", "align": "left"},
+          {"lon": 152.9, "lat": -27.4, "label": "Brisbane $8.2bn", "align": "left"},
+          {"lon": 115.9, "lat": -31.9, "label": "Perth $5.3bn", "align": "right"}
+        ]
+      },
+      "transform": [{"filter": "datum.align == 'left'"}],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 16,
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#33414e"
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"lon": 144.9, "lat": -37.8, "label": "Melbourne $12.4bn"},
+          {"lon": 115.9, "lat": -31.9, "label": "Perth $5.3bn"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -16,
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#ffffff",
+        "stroke": "#ffffff",
+        "strokeWidth": 4,
+        "strokeJoin": "round"
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"lon": 144.9, "lat": -37.8, "label": "Melbourne $12.4bn"},
+          {"lon": 115.9, "lat": -31.9, "label": "Perth $5.3bn"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -16,
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#33414e"
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"lon": 137.0, "lat": -12.2, "label": "Regions outside the capital cities earn"},
+          {"lon": 137.0, "lat": -13.4, "label": "54% of the money spent in these 50 regions"}
+        ]
+      },
+      "mark": {"type": "text", "align": "left", "fontSize": 13, "color": "#33414e"},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "label"}
+      }
+    }
+  ],
+  "config": {
+    "font": "Source Sans 3",
+    "view": {"stroke": null},
+    "legend": {"labelFontSize": 13, "titleFontSize": 13, "titleColor": "#33414e", "labelColor": "#55606a"}
+  }
+}
