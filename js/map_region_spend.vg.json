@@ -53,7 +53,7 @@
             "orient": "bottom-left",
             "direction": "horizontal",
             "values": [1, 5, 12],
-            "labelExpr": "'$' + datum.label + 'bn'",
+            "labelExpr": "'$' + datum.label + ' billion'",
             "symbolFillColor": "#c8741f",
             "symbolStrokeColor": "#ffffff"
           }
@@ -74,10 +74,10 @@
     {
       "data": {
         "values": [
-          {"lon": 144.9, "lat": -37.8, "label": "Melbourne $12.4bn", "align": "right"},
-          {"lon": 151.2, "lat": -33.6, "label": "Sydney $12.2bn", "align": "left"},
-          {"lon": 152.9, "lat": -27.4, "label": "Brisbane $8.2bn", "align": "left"},
-          {"lon": 115.9, "lat": -31.9, "label": "Perth $5.3bn", "align": "right"}
+          {"lon": 144.9, "lat": -37.8, "label": "Melbourne $12.4 billion", "align": "right"},
+          {"lon": 151.2, "lat": -33.6, "label": "Sydney $12.2 billion", "align": "left"},
+          {"lon": 152.9, "lat": -27.4, "label": "Brisbane $8.2 billion", "align": "left"},
+          {"lon": 115.9, "lat": -31.9, "label": "Perth $5.3 billion", "align": "right"}
         ]
       },
       "transform": [{"filter": "datum.align == 'left'"}],
@@ -101,10 +101,10 @@
     {
       "data": {
         "values": [
-          {"lon": 144.9, "lat": -37.8, "label": "Melbourne $12.4bn", "align": "right"},
-          {"lon": 151.2, "lat": -33.6, "label": "Sydney $12.2bn", "align": "left"},
-          {"lon": 152.9, "lat": -27.4, "label": "Brisbane $8.2bn", "align": "left"},
-          {"lon": 115.9, "lat": -31.9, "label": "Perth $5.3bn", "align": "right"}
+          {"lon": 144.9, "lat": -37.8, "label": "Melbourne $12.4 billion", "align": "right"},
+          {"lon": 151.2, "lat": -33.6, "label": "Sydney $12.2 billion", "align": "left"},
+          {"lon": 152.9, "lat": -27.4, "label": "Brisbane $8.2 billion", "align": "left"},
+          {"lon": 115.9, "lat": -31.9, "label": "Perth $5.3 billion", "align": "right"}
         ]
       },
       "transform": [{"filter": "datum.align == 'left'"}],
@@ -125,8 +125,8 @@
     {
       "data": {
         "values": [
-          {"lon": 144.9, "lat": -37.8, "label": "Melbourne $12.4bn"},
-          {"lon": 115.9, "lat": -31.9, "label": "Perth $5.3bn"}
+          {"lon": 144.9, "lat": -37.8, "label": "Melbourne $12.4 billion"},
+          {"lon": 115.9, "lat": -31.9, "label": "Perth $5.3 billion"}
         ]
       },
       "mark": {
@@ -149,8 +149,8 @@
     {
       "data": {
         "values": [
-          {"lon": 144.9, "lat": -37.8, "label": "Melbourne $12.4bn"},
-          {"lon": 115.9, "lat": -31.9, "label": "Perth $5.3bn"}
+          {"lon": 144.9, "lat": -37.8, "label": "Melbourne $12.4 billion"},
+          {"lon": 115.9, "lat": -31.9, "label": "Perth $5.3 billion"}
         ]
       },
       "mark": {

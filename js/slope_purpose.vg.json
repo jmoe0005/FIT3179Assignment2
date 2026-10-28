@@ -33,7 +33,7 @@
       "legend": null,
       "scale": {
         "domain": ["Holiday", "Visiting friends and relatives", "Business", "Other"],
-        "range": ["#2f6db5", "#8e5aa8", "#33414e", "#8f887e"]
+        "range": ["#2f6db5", "#8e5aa8", "#33414e", "#6f695f"]
       }
     },
     "tooltip": [

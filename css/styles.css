@@ -63,7 +63,7 @@ h1 {
   font-size: 20px;
   line-height: 1.5;
   color: #55606a;
-  max-width: 34em;
+  max-width: 30em;
   margin: 0;
 }
 
@@ -96,6 +96,7 @@ h2 {
 }
 
 .chart-subtitle {
+  max-width: 60ch;
   font-size: 15px;
   line-height: 1.45;
   color: #55606a;
@@ -109,7 +110,8 @@ h2 {
 .note {
   font-size: 13px;
   line-height: 1.45;
-  color: #6d7782;
+  color: #5d6773;
+  max-width: 60ch;
   margin: 8px 0 0;
 }
 
@@ -120,7 +122,7 @@ h2 {
 .holiday { color: #2f6db5; font-weight: 700; }
 .vfr { color: #8e5aa8; font-weight: 700; }
 .business { color: #33414e; font-weight: 700; }
-.grey-key { color: #8f887e; font-weight: 700; }
+.grey-key { color: #6f695f; font-weight: 700; }
 
 .takeaway {
   border-left: 4px solid #c8741f;

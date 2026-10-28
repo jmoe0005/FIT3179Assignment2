@@ -363,18 +363,28 @@
 
   <script type="text/javascript">
     var options = { "actions": false };
-    vegaEmbed('#vis1', 'js/line_national_trips.vg.json', options);
-    vegaEmbed('#vis2', 'js/connected_scatter_trips_spend.vg.json', options);
-    vegaEmbed('#vis3', 'js/heatmap_state_recovery.vg.json', options);
-    vegaEmbed('#vis4', 'js/bar_capital_vs_regional.vg.json', options);
-    vegaEmbed('#vis5', 'js/map_trips_per_resident.vg.json', options);
-    vegaEmbed('#vis6', 'js/map_region_spend.vg.json', options);
-    vegaEmbed('#vis7', 'js/bump_top_regions.vg.json', options);
-    vegaEmbed('#vis8', 'js/flow_map_interstate.vg.json', options);
-    vegaEmbed('#vis9', 'js/bar_locals_vs_interstate.vg.json', options);
-    vegaEmbed('#vis10', 'js/slope_purpose.vg.json', options);
-    vegaEmbed('#vis11', 'js/streamgraph_purpose_quarter.vg.json', options);
-    vegaEmbed('#vis12', 'js/waffle_spend_items.vg.json', options);
+
+    function drawCharts() {
+      vegaEmbed('#vis1', 'js/line_national_trips.vg.json', options);
+      vegaEmbed('#vis2', 'js/connected_scatter_trips_spend.vg.json', options);
+      vegaEmbed('#vis3', 'js/heatmap_state_recovery.vg.json', options);
+      vegaEmbed('#vis4', 'js/bar_capital_vs_regional.vg.json', options);
+      vegaEmbed('#vis5', 'js/map_trips_per_resident.vg.json', options);
+      vegaEmbed('#vis6', 'js/map_region_spend.vg.json', options);
+      vegaEmbed('#vis7', 'js/bump_top_regions.vg.json', options);
+      vegaEmbed('#vis8', 'js/flow_map_interstate.vg.json', options);
+      vegaEmbed('#vis9', 'js/bar_locals_vs_interstate.vg.json', options);
+      vegaEmbed('#vis10', 'js/slope_purpose.vg.json', options);
+      vegaEmbed('#vis11', 'js/streamgraph_purpose_quarter.vg.json', options);
+      vegaEmbed('#vis12', 'js/waffle_spend_items.vg.json', options);
+    }
+
+    // Wait until the Source Sans 3 web font has loaded, so the charts are not drawn in a fallback font.
+    // If the font cannot load, the charts are still drawn.
+    Promise.all([
+      document.fonts.load('13px "Source Sans 3"'),
+      document.fonts.load('bold 13px "Source Sans 3"')
+    ]).then(drawCharts, drawCharts);
   </script>
 </body>
 

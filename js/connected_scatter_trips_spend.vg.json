@@ -94,7 +94,7 @@
         "type": "text",
         "fontSize": 12,
         "fontStyle": "italic",
-        "color": "#7a8590",
+        "color": "#55606a",
         "align": "left"
       },
       "encoding": {"text": {"field": "label"}}
